@@ -1,0 +1,388 @@
+{
+  "matched": [
+    {
+      "group_id": "C001",
+      "matched_bom": "摆臂",
+      "match_type": "area",
+      "group_size": "600.91x800.8",
+      "bom_size": "845x100x300",
+      "group_area": 481208.73,
+      "bom_area": 253500.0
+    },
+    {
+      "group_id": "C002",
+      "matched_bom": "活动角座",
+      "match_type": "area",
+      "group_size": "401.04x259.05",
+      "bom_size": "315x180x260",
+      "group_area": 103889.41,
+      "bom_area": 81900.0
+    },
+    {
+      "group_id": "C003",
+      "matched_bom": "活动角座",
+      "match_type": "area",
+      "group_size": "292.49x333.42",
+      "bom_size": "315x180x260",
+      "group_area": 97522.02,
+      "bom_area": 81900.0
+    },
+    {
+      "group_id": "C004",
+      "matched_bom": "固定底板",
+      "match_type": "area",
+      "group_size": "47.84x108.91",
+      "bom_size": "260x240x25",
+      "group_area": 5210.25,
+      "bom_area": 6500.0
+    },
+    {
+      "group_id": "C005",
+      "matched_bom": "活动角座",
+      "match_type": "size",
+      "group_size": "183.52x163.8",
+      "bom_size": "315x180x260"
+    },
+    {
+      "group_id": "C006",
+      "matched_bom": "带轮座",
+      "match_type": "area",
+      "group_size": "19.78x40.05",
+      "bom_size": "70x65x15",
+      "group_area": 792.19,
+      "bom_area": 1050.0
+    },
+    {
+      "group_id": "C007",
+      "matched_bom": "带轮座",
+      "match_type": "area",
+      "group_size": "30.25x21.54",
+      "bom_size": "70x65x15",
+      "group_area": 651.58,
+      "bom_area": 1050.0
+    },
+    {
+      "group_id": "C009",
+      "matched_bom": "活动角座",
+      "match_type": "size",
+      "group_size": "173.95x164.31",
+      "bom_size": "315x180x260"
+    },
+    {
+      "group_id": "C010",
+      "matched_bom": "固定底板",
+      "match_type": "area",
+      "group_size": "90.86x89.65",
+      "bom_size": "260x240x25",
+      "group_area": 8145.6,
+      "bom_area": 6500.0
+    },
+    {
+      "group_id": "C012",
+      "matched_bom": "活动角座",
+      "match_type": "area",
+      "group_size": "299.97x186.86",
+      "bom_size": "315x180x260",
+      "group_area": 56052.39,
+      "bom_area": 81900.0
+    },
+    {
+      "group_id": "C013",
+      "matched_bom": "活动角座",
+      "match_type": "size",
+      "group_size": "249.55x144.06",
+      "bom_size": "315x180x260"
+    },
+    {
+      "group_id": "C014",
+      "matched_bom": "摆臂",
+      "match_type": "size",
+      "group_size": "954.59x596.83",
+      "bom_size": "845x100x300"
+    },
+    {
+      "group_id": "C015",
+      "matched_bom": "带轮座",
+      "match_type": "area",
+      "group_size": "43.01x23.81",
+      "bom_size": "70x65x15",
+      "group_area": 1024.07,
+      "bom_area": 1050.0
+    },
+    {
+      "group_id": "C018",
+      "matched_bom": "固定底板",
+      "match_type": "area",
+      "group_size": "87.54x50.54",
+      "bom_size": "260x240x25",
+      "group_area": 4424.27,
+      "bom_area": 6500.0
+    },
+    {
+      "group_id": "C019",
+      "matched_bom": "减速机固定板",
+      "match_type": "area",
+      "group_size": "14.14x171.47",
+      "bom_size": "120x100x20",
+      "group_area": 2424.59,
+      "bom_area": 2400.0
+    },
+    {
+      "group_id": "C020",
+      "matched_bom": "固定底板",
+      "match_type": "area",
+      "group_size": "107.62x62.13",
+      "bom_size": "260x240x25",
+      "group_area": 6686.43,
+      "bom_area": 6500.0
+    },
+    {
+      "group_id": "C021",
+      "matched_bom": "固定底板",
+      "match_type": "area",
+      "group_size": "100.24x57.27",
+      "bom_size": "260x240x25",
+      "group_area": 5740.74,
+      "bom_area": 6500.0
+    },
+    {
+      "group_id": "C022",
+      "matched_bom": "支臂R",
+      "match_type": "area",
+      "group_size": "134.35x142.91",
+      "bom_size": "460x70x80",
+      "group_area": 19199.96,
+      "bom_area": 36800.0
+    },
+    {
+      "group_id": "C023",
+      "matched_bom": "摆臂",
+      "match_type": "area",
+      "group_size": "644.2x375.37",
+      "bom_size": "845x100x300",
+      "group_area": 241813.35,
+      "bom_area": 253500.0
+    },
+    {
+      "group_id": "C024",
+      "matched_bom": "摆臂",
+      "match_type": "area",
+      "group_size": "649.5x371.89",
+      "bom_size": "845x100x300",
+      "group_area": 241542.55,
+      "bom_area": 253500.0
+    },
+    {
+      "group_id": "C025",
+      "matched_bom": "固定底板",
+      "match_type": "area",
+      "group_size": "107.62x62.13",
+      "bom_size": "260x240x25",
+      "group_area": 6686.43,
+      "bom_area": 6500.0
+    },
+    {
+      "group_id": "C026",
+      "matched_bom": "固定底板",
+      "match_type": "area",
+      "group_size": "100.24x57.27",
+      "bom_size": "260x240x25",
+      "group_area": 5740.74,
+      "bom_area": 6500.0
+    },
+    {
+      "group_id": "C027",
+      "matched_bom": "活动角座",
+      "match_type": "size",
+      "group_size": "229.81x153.08",
+      "bom_size": "315x180x260"
+    },
+    {
+      "group_id": "C028",
+      "matched_bom": "固定底板",
+      "match_type": "area",
+      "group_size": "87.54x50.54",
+      "bom_size": "260x240x25",
+      "group_area": 4424.27,
+      "bom_area": 6500.0
+    },
+    {
+      "group_id": "C029",
+      "matched_bom": "转臂",
+      "match_type": "size",
+      "group_size": "25.6x10.25",
+      "bom_size": "45x280x15.8"
+    },
+    {
+      "group_id": "C030",
+      "matched_bom": "活动角座",
+      "match_type": "area",
+      "group_size": "257.55x171.56",
+      "bom_size": "315x180x260",
+      "group_area": 44185.28,
+      "bom_area": 81900.0
+    },
+    {
+      "group_id": "C031",
+      "matched_bom": "支臂R",
+      "match_type": "area",
+      "group_size": "207.13x119.57",
+      "bom_size": "460x70x80",
+      "group_area": 24766.53,
+      "bom_area": 36800.0
+    },
+    {
+      "group_id": "C032",
+      "matched_bom": "带轮座",
+      "match_type": "area",
+      "group_size": "30.82x35.97",
+      "bom_size": "70x65x15",
+      "group_area": 1108.6,
+      "bom_area": 1050.0
+    },
+    {
+      "group_id": "C033",
+      "matched_bom": "支臂R",
+      "match_type": "area",
+      "group_size": "77.78x249.04",
+      "bom_size": "460x70x80",
+      "group_area": 19370.33,
+      "bom_area": 36800.0
+    },
+    {
+      "group_id": "C034",
+      "matched_bom": "活动角座",
+      "match_type": "area",
+      "group_size": "270.01x200.37",
+      "bom_size": "315x180x260",
+      "group_area": 54101.9,
+      "bom_area": 81900.0
+    },
+    {
+      "group_id": "C035",
+      "matched_bom": "滑块连板",
+      "match_type": "area",
+      "group_size": "137.89x114.69",
+      "bom_size": "450x320x20",
+      "group_area": 15814.6,
+      "bom_area": 9000.0
+    },
+    {
+      "group_id": "C036",
+      "matched_bom": "固定底板",
+      "match_type": "area",
+      "group_size": "82.46x123.79",
+      "bom_size": "260x240x25",
+      "group_area": 10207.72,
+      "bom_area": 6500.0
+    },
+    {
+      "group_id": "C037",
+      "matched_bom": "滑块连板",
+      "match_type": "area",
+      "group_size": "152.03x87.76",
+      "bom_size": "450x320x20",
+      "group_area": 13342.15,
+      "bom_area": 9000.0
+    },
+    {
+      "group_id": "C039",
+      "matched_bom": "摆臂",
+      "match_type": "area",
+      "group_size": "670.96x387.34",
+      "bom_size": "845x100x300",
+      "group_area": 259889.65,
+      "bom_area": 253500.0
+    },
+    {
+      "group_id": "C040",
+      "matched_bom": "摆臂",
+      "match_type": "area",
+      "group_size": "655.96x378.68",
+      "bom_size": "845x100x300",
+      "group_area": 248398.93,
+      "bom_area": 253500.0
+    },
+    {
+      "group_id": "C043",
+      "matched_bom": "滑块连板",
+      "match_type": "area",
+      "group_size": "171.52x99.02",
+      "bom_size": "450x320x20",
+      "group_area": 16983.91,
+      "bom_area": 9000.0
+    },
+    {
+      "group_id": "C044",
+      "matched_bom": "活动角座",
+      "match_type": "area",
+      "group_size": "306.64x177.02",
+      "bom_size": "315x180x260",
+      "group_area": 54281.41,
+      "bom_area": 81900.0
+    },
+    {
+      "group_id": "C045",
+      "matched_bom": "活动角座",
+      "match_type": "area",
+      "group_size": "279.31x271.47",
+      "bom_size": "315x180x260",
+      "group_area": 75824.29,
+      "bom_area": 81900.0
+    },
+    {
+      "group_id": "C046",
+      "matched_bom": "活动角座",
+      "match_type": "area",
+      "group_size": "279.31x271.47",
+      "bom_size": "315x180x260",
+      "group_area": 75824.29,
+      "bom_area": 81900.0
+    },
+    {
+      "group_id": "C047",
+      "matched_bom": "活动角座",
+      "match_type": "size",
+      "group_size": "233.29x134.68",
+      "bom_size": "315x180x260"
+    }
+  ],
+  "unmatched": [
+    {
+      "group_id": "C008",
+      "reason": "无匹配 BOM 项",
+      "bbox": [
+        1729.18,
+        322.6,
+        1740.18,
+        328.95
+      ]
+    },
+    {
+      "group_id": "C011",
+      "reason": "无匹配 BOM 项",
+      "bbox": [
+        1587.76,
+        407.18,
+        1590.96,
+        410.3
+      ]
+    },
+    {
+      "group_id": "C016",
+      "reason": "无匹配 BOM 项",
+      "bbox": [
+        1582.53,
+        147.17,
+        1593.32,
+        153.4
+      ]
+    }
+  ],
+  "statistics": {
+    "total_groups": 43,
+    "matched": 40,
+    "unmatched": 3,
+    "recognition_rate": 93.02
+  }
+}

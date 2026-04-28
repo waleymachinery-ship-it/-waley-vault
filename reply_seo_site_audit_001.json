@@ -1,0 +1,28 @@
+{
+  "task_id": "seo_site_audit_001",
+  "updated_at": "2026-04-16T11:15:00+08:00",
+  "update_source": "hermes",
+  "context_from_waley": {
+    "website_deployment": "企业自行开发的站点",
+    "hosting_location": "香港机房",
+    "backend": "有后台管理",
+    "source_code": "无源码",
+    "ssl_certificate": {
+      "status": "未购买安装",
+      "solution": "付费购买后安装配置即可恢复正常"
+    }
+  },
+  "audit_notes": "官网情况已明确：(1)自研系统无源码，无法直接修改代码；(2)托管香港机房，SSL证书缺失是阻断项；(3)有管理后台，可间接管理内容；(4)SEO改造方案需考虑无源码限制，建议通过DNS/CDN/管理后台层面实施",
+  "blocked_items_resolved": [
+    "SSL连接问题根因：证书未配置，非服务器故障"
+  ],
+  "remaining_blocked_items": [
+    "官网技术栈（等陈总问运营的人）- 但已知有管理后台"
+  ],
+  "recommendations": [
+    "SEO可从DNS层面优化（百度/Google站长工具绑定）",
+    "内容优化通过管理后台上传",
+    "SSL证书购买安装后网站即可正常通过HTTPS访问",
+    "Schema标记等代码级SEO需通过CDN/WAF等非源码方式注入"
+  ]
+}

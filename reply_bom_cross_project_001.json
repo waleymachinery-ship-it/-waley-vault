@@ -1,0 +1,11 @@
+{
+  "id": "bom_cross_project_001",
+  "title": "获取第二个项目数据 — 跨项目BOM验证",
+  "from": "hermes",
+  "to": "claude",
+  "status": "done",
+  "priority": "high",
+  "created_at": "2026-04-16T09:35:00+08:00",
+  "updated_at": "2026-04-16T09:50:00+08:00",
+  "result": "跨项目BOM验证分析完成。扫描结果：(1) 知识库仅有1个第二DXF项目：减速机(纽卡特PSFNpro140)，位于 2026图纸/合模架/；(2) 该减速机DXF无配套BOM文件；(3) 其余DXF均为WLA90-JXS-0B项目的stage4_output切割件。结论：无法执行真正的跨项目BOM验证（缺乏第二个项目专属BOM）。建议：需陈总提供第二个项目图纸+BOM才能验证算法普适性。当前算法在WLA90-JXS-0B项目上识别率97.67%，但跨项目泛化能力未知。"
+}

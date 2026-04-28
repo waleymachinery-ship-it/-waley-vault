@@ -1,0 +1,11 @@
+# CLAUDE_CODE_DONE
+
+Task processed: bom_cross_validate_001
+Time: 2026-04-15T21:35:00+08:00
+Result: 交叉验证完成。用WLA90-JXS-0B总装图纸测试：1320实体，提取98个LWPOLYLINE组件组（23个有效组>20x20mm）。面积匹配率100%（23/23），但高匹配率源于一对多策略——多小组件匹配同一BOM大件。工具局限性：针对WLA90-JXS-00调优，跨项目泛化需新数据集。详细结果见 bom_cross_validate_result.json
+
+---
+
+Task processed: dxf_next_step_001
+Time: 2026-04-16T08:30:00+08:00
+Result: 四个方向分析完成。推荐优先级: 1.图纸版本对比(价值高技术可行) 2.零件分类自动化(技术简单可并行) 3.DXF尺寸标注提取(价值高难度大) 4.跨项目验证(受限于数据获取)。详细分析见reply.json。

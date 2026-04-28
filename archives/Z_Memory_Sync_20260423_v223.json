@@ -1,0 +1,123 @@
+{
+  "version": 223,
+  "last_modified": "2026-04-23T22:25:00+08:00",
+  "last_writer": "jarvis",
+  "JARVIS_STARTUP": "2026-04-23T22:25:00+08:00",
+  "CLAUDE_STARTUP": "2026-04-23T22:22:32+08:00",
+  "HERMES_STARTUP": "2026-04-23T21:16:00+08:00",
+  "notes": "Jarvis重启后记忆恢复，22:25启动确认已写入Z_Memory v223",
+  "rules": [
+    {
+      "id": "rule-task-queue-001",
+      "title": "三AI任务队列规则（2026-04-14新增）",
+      "content": "【任务队列读写规范】\n\n文件：D:\\桌面文件\\伟力机械知识库\\00_Workflow\\memory\\task_queue.json\n\n## Claude（派发方）\n- 往 tasks 数组追加新任务，status: pending\n- id 格式：task-YYYYMMDD-NNN\n- 每次写入 version +1\n\n## Hermes/Jarvis（消费方）\n- 每次启动时（Step 4b）检查 pending 任务\n- status 流转：pending → in_progress → done/failed\n- 完成后：填写 result 字段 + 同步 Z_Memory_Sync.json\n\n## 背景\n飞书 Bot 发送的 @Hermes 不触发 Hermes，因此改用 Vault 任务队列实现异步派发，无需 @mention。",
+      "tags": ["task-queue", "rules", "tri-ai", "async", "2026-04-14"],
+      "confidence": 1
+    },
+    {
+      "id": "rule-tri-ai-hard-001",
+      "title": "三AI协同硬性规则",
+      "content": "【三AI协同硬性规则 - 2026-04-11 生效】\n\n所有AI（Jarvis/Hermes/Claude）必须严格执行：\n\n## 规则1：Vault知识库作为共享大脑\n- 所有AI读写同一套上下文，存储于 D:\\桌面文件\\伟力机械知识库\\\n- Z_Memory_Sync.json 是三AI同步核心基地\n- 不得各自维护独立记忆库\n\n## 规则2：Hermes维护任务状态机\n- Hermes作为调度中枢，跟踪每条消息的处理进度\n- 状态存储：tasks/status.json\n- 状态流转：pending → processing → done/error\n\n## 规则3：长期记忆进知识库，短期上下文用消息ID关联\n- 消息ID格式：{date}-{seq}，如 2026-04-11-001\n- 上下文关联：消息ID → 处理记录 → 结果\n- 长期记忆：关键信息提取 → 写入对应知识库文件\n\n## 规则4：重要发现必须立即同步Vault\n- 任何AI发现系统问题、协作异常、配置变更，必须立即写入Z_Memory_Sync.json\n- 不得拖延，不得依赖人提醒\n- 这是坚决执行的规则\n\n## 任务流转\n1. Jarvis接收 → 判断类型 → 记录到tasks/inbox/\n2. Hermes调度 → 更新任务状态 → 处理或转发\n3. Claude接收复杂问题 → 处理 → 写回结果\n4. 结果通过飞书返回用户",
+      "tags": ["rules", "硬性要求", "tri-ai", "协作", "强执行"],
+      "confidence": 1
+    }
+  ],
+  "entries": [
+    {
+      "id": "claude-work-2026-04-23-1530",
+      "agent": "claude",
+      "timestamp": "2026-04-23T15:30:00+08:00",
+      "content": "【Claude 工作记录 - 2026-04-23 15:30】\n\n## 陈总出差归来同步\n\n### 出差三天总结\n\n**Hermes 完成：**\n1. 径向壁厚控制系统研发建议书 V1.0（05_战略资料/）\n2. AI工程图纸能力调研（ezdxf/DXF读取验证，BOM验证97.67%）\n3. 每天 Vault 同步更新\n\n### 三AI状态（出差期间）\n| 日期 | Jarvis | Hermes | Claude |\n|------|--------|--------|--------|\n| 4/21 | 19:05启动 | 19:06启动 | 待机 |\n| 4/22 | 21:15启动 | 21:20同步 | 待机 |\n| 4/23 | 15:19启动 | — | 本次同步 |\n\n### 待推进项目\n1. 径向壁厚建议书 — 待陈总审批\n2. AI工程图纸调研 — 跨项目验证需第二项目BOM\n3. MiniMax API 修复\n4. Leads 接口格式\n\n<!-- CLAUDE_CODE_DONE: 出差归来同步完成 -->",
+      "tags": ["claude", "sync", "出差归来", "2026-04-23"],
+      "confidence": 1
+    },
+    {
+      "id": "claude-work-2026-04-23-2130",
+      "agent": "claude",
+      "timestamp": "2026-04-23T21:30:00+08:00",
+      "content": "【Claude 工作记录 - 2026-04-23 21:30】\n\n## 3DX技术资料图片分析\n\n### 来源\n陈总提供：星贝尔 BESTAR 3DX 可变形模头系统.docx\n已提取6张图片到 AI工程图模型测试/ 目录\n\n### 图片清单\n| 文件 | 类型 | 尺寸 |\n|------|------|------|\n| image1.jpeg | Canon相机原图 | 5760x3840 |\n| image2.png | 技术示意图 | 669x340 |\n| image3.png | 技术示意图 | 888x452 |\n| image4.jpeg | 文档照片 | 1136x852 |\n| image5.jpeg | 照片 | 800x800 |\n| image6.jpeg | 照片 | 1594x1594 |\n\n\n### 分析状态\nRead工具无法读取图像内容（返回null），分析失败\n\n<!-- CLAUDE_CODE_DONE: 3DX图片提取完成，分析失败 -->",
+      "tags": ["3dx", "bestar", "image-analysis", "hermes", "2026-04-23"],
+      "confidence": 1
+    },
+    {
+      "id": "claude-work-2026-04-23-2145",
+      "agent": "claude",
+      "timestamp": "2026-04-23T21:45:00+08:00",
+      "content": "【补充 - 3DX图片正确路径】\n\n### 6张图片正确路径（已更正）\n| 图片 | 正确路径 |\n|------|----------|\n| image1.jpeg | D:\\桌面文件\\伟力机械知识库\\AI工程图模型测试\\3dx_image1.jpeg |\n| image2.png | D:\\桌面文件\\伟力机械知识库\\AI工程图模型测试\\3dx_image2.png |\n| image3.png | D:\\桌面文件\\伟力机械知识库\\AI工程图模型测试\\3dx_image3.png |\n| image4.jpeg | C:\\Users\\pc\\AppData\\Local\\Temp\\3dx_docx_extract\\word\\media\\image4.jpeg |\n| image5.jpeg | C:\\Users\\pc\\AppData\\Local\\Temp\\3dx_docx_extract\\word\\media\\image5.jpeg |\n| image6.jpeg | C:\\Users\\pc\\AppData\\Local\\Temp\\3dx_docx_extract\\word\\media\\image6.jpeg |\n\n<!-- CLAUDE_CODE_DONE: 3DX图片路径已更正 -->",
+      "tags": ["3dx", "bestar", "path-fix", "2026-04-23"],
+      "confidence": 1
+    },
+    {
+      "id": "claude-work-2026-04-23-2200",
+      "agent": "claude",
+      "timestamp": "2026-04-23T22:00:00+08:00",
+      "content": "【Claude 工作记录 - 2026-04-23 22:00】\n\n## CAD/AI图纸项目现状澄清\n\n### 已验证可行\n- DXF文件读取 — ezdxf验证通过（1320实体）\n- BOM验证 — 单一项目识别率 97.67%（WLA90-JXS-0B）\n\n\n### 受限制但可解决\n- 跨项目验证 — 需第二项目BOM数据\n- 纯几何图纸标注提取 — 现有图纸无TEXT/DIMENSION实体\n\n### 还在调研中\n- CAD生成方案 — Pythonocc/ezdxf/LibreCAD\n\n### 图片转工程图\n- OCR/CV方案 — 尚未突破\n\n<!-- CLAUDE_CODE_DONE: CAD项目现状澄清 -->",
+      "tags": ["cad", "ai", "bom", "dxf", "status", "2026-04-23"],
+      "confidence": 1
+    },
+    {
+      "id": "hermes-startup-2026-04-23",
+      "agent": "hermes",
+      "timestamp": "2026-04-23T21:16:00+08:00",
+      "content": "【Hermes 启动确认 - 2026-04-23 21:16】\n\n## 标准启动流程执行\n\n| 步骤 | 文件 | 状态 |\n|------|------|------|\n| 1. 读取 Z_Memory_Sync | v220 | ✅ |\n| 2. 读取当日日志 | 2026-04-23.md | ✅ |\n| 3. 检查任务队列 | task_queue.json v44，0 pending | ✅ |\n| 4. 写入启动确认 | Z_Memory_Sync.json | ✅ 本次 |\n\n## 三AI状态\n- Jarvis：2026-04-23 15:19 ✅\n- Claude：2026-04-23 15:30 ✅\n- Hermes：本次启动 ✅\n\n\n## 当前核心任务\nAI工程图纸能力调研（进行中）\n\n\n<!-- HERMES_STARTUP: Hermes 出差归来重启确认 -->",
+      "tags": ["startup", "hermes", "出差归来", "2026-04-23"],
+      "confidence": 1
+    },
+    {
+      "id": "hermes-work-2026-04-21-rd-proposal",
+      "agent": "hermes",
+      "timestamp": "2026-04-21T19:30:00+08:00",
+      "content": "【Hermes 工作记录 - 2026-04-21 19:30】\n\n## 径向壁厚控制系统研发建议书完成\n\n### 背景\n陈总提供星贝尔3DX技术资料（BESTAR可变形模头系统），询问伟力能否突破。\n\n### 决策\n不走仿制路线，用AI仿真+实时控制实现差异化竞争：\n- 3DX用「机械执行器+预设曲线」\n- 伟力用「AI实时预测+执行器」\n\n\n### 已完成\n《伟力机械径向壁厚控制系统研发建议书 V1.0》\n路径：05_战略资料/伟力机械径向壁厚控制系统研发建议书_V1.0_2026-04-21.md\n\n### 核心内容\n- 三层架构：AI预测层 → 实时控制层 → 执行机构层\n- 24个月4阶段：P0基础验证 → P1原型机 → P2联调 → P3产品化\n- 预算估算：50-75万（24个月）\n- 核心指标：径向控制分区8-32区，响应≤20ms，壁厚精度±0.3mm\n- 与3DX对比：伟力更聪明（AI决策），星贝尔更精密（机械为主）\n\n### 待确认\n陈总审批后组建研发小组\n\n<!-- HERMES_DONE -->",
+      "tags": ["hermes", "rd-proposal", "wall-thickness", "3dx", "ai-simulation", "2026-04-21"],
+      "confidence": 1
+    },
+    {
+      "id": "hermes-vault-sync-2026-04-22",
+      "agent": "hermes",
+      "timestamp": "2026-04-22T21:20:00+08:00",
+      "content": "【Hermes Vault同步 - 2026-04-22 21:20】\n\n## 陈总指令执行\n\n陈总出差第二天，晚上飞书群指令：\n\"今天没干啥，我一天都在上海雅思展忙着接待任务。所以你们也同步更新一下昨天和今天的vault和工作日志，以免忘记。明天我回去后继续推进。\"\n\n## 执行结果\n\n1. ✅ 2026-04-21.md — Hermes补充记录：径向壁厚建议书记录、AI工程图纸调研现状\n2. ✅ 2026-04-22.md — 创建并补充今日状态（雅思展全天接待）\n3. ✅ Z_Memory_Sync.json — v210→v211，HERMES_STARTUP更新为21:20\n\n## AI工程图纸能力调研 — 当前技术状态\n\n| 方向 | 状态 | 说明 |\n|------|------|------|\n| ezdxf读取DXF | ✅ 可行 | WLA90-JXS-0B已验证，1320实体 |\n| BOM验证工具 | ✅ 97.67% | 单一项目识别率 |\n| 跨项目验证 | ❌ 受限 | 需第二项目BOM数据 |\n| DXF尺寸标注提取 | ⚠️ 有限 | 纯几何图纸，无TEXT/DIMENSION实体 |\n| CAD生成方案 | 🔬 调研中 | Pythonocc/ezdxf/LibreCAD |\n\n<!-- HERMES_VAULT_SYNC: 2026-04-22 21:20 完成 -->",
+      "tags": ["hermes", "vault-sync", "出差", "2026-04-22"],
+      "confidence": 1
+    },
+    {
+      "id": "jarvis-startup-2026-04-21-1905",
+      "agent": "jarvis",
+      "timestamp": "2026-04-21T19:05:00+08:00",
+      "content": "【Jarvis 启动确认 - 2026-04-21 19:05】\n\n## 标准启动流程执行\n\n| 步骤 | 文件 | 状态 |\n|------|------|------|\n| Step 0 读取协作规则 | AI_COLLABORATION_RULES.md | ✅ |\n| Step 1 读取 Z_Memory_Sync | v210 | ✅ |\n| Step 2 读取当日日志 | 2026-04-21.md（不存在）→ 创建 | ✅ |\n| Step 3 写入启动确认 | Z_Memory_Sync | ✅ 本次 |\n| Step 4 检查任务队列 | task_queue.json | ✅ 0 pending |\n| Step 5 身份确认 | SOUL.md + IDENTITY.md | ✅ |\n| Step 6 飞书频道就绪 | feishu group | ✅ |\n\n## 同步完成\n- Z_Memory_Sync v210 已同步\n- 2026-04-20 工作日志已读\n- task_queue v44，0 pending，无待处理任务\n\n## 三AI状态\n- Jarvis：本次启动 ✅\n- Hermes：最后活跃 2026-04-20 22:40\n- Claude：最后活跃 2026-04-21 00:05\n\n<!-- JARVIS_STARTUP: 2026-04-21T19:05:00+08:00 三AI记忆同步完成 -->",
+      "tags": ["startup", "jarvis", "vault-sync", "2026-04-21"],
+      "confidence": 1
+    },
+    {
+      "id": "jarvis-startup-2026-04-23-2225",
+      "agent": "jarvis",
+      "timestamp": "2026-04-23T22:25:00+08:00",
+      "content": "【Jarvis 启动确认 - 2026-04-23 22:25】\n\n## 重启后记忆恢复\n\n### 标准启动流程执行\n| 步骤 | 文件 | 状态 |\n|------|------|------|\n| 1. 读取 Z_Memory_Sync | v223 | ✅ |\n| 2. 读取当日日志 | 2026-04-23.md | ✅ |\n| 3. 读取协作规则 | AI_COLLABORATION_RULES.md | ✅ |\n| 4. 写入启动确认 | Z_Memory_Sync | ✅ 本次 |\n\n## 三AI状态\n- Jarvis：22:25 启动 ✅（本次）\n- Hermes：21:16 启动 ✅\n- Claude：22:22 启动 ✅\n\n## 当前待处理\n- 三AI系统升级计划已发飞书群，待审批\n- 任务队列：0 pending\n\n<!-- JARVIS_STARTUP: 2026-04-23T22:25:00+08:00 重启后记忆恢复，已读取 Z_Memory v223 -->",
+      "tags": ["startup", "jarvis", "重启恢复", "2026-04-23"],
+      "confidence": 1
+    },
+    {
+      "id": "hermes-startup-2026-04-21-1906",
+      "agent": "hermes",
+      "timestamp": "2026-04-21T19:06:00+08:00",
+      "content": "【Hermes 启动确认 - 2026-04-21 19:06】\n\n## 启动检查清单执行结果\n\n| 步骤 | 文件 | 状态 |\n|------|------|------|\n| 1. 读取核心基地 | Z_Memory_Sync.json v210 | ✅ |\n| 2. 读取当日日志 | 2026-04-21.md | ✅ |\n| 3. 检查任务队列 | task_queue.json v44，0 pending | ✅ |\n| 4. 写入启动确认 | Z_Memory_Sync.json | ✅ 本次 |\n\n## 三AI状态\n- Jarvis：2026-04-21 19:05 ✅\n- Claude：2026-04-21 00:05 ✅\n- Hermes：本次启动 ✅\n\n## 当前核心任务\nAI工程图纸能力调研（按2026-04-21.md计划）\n\n<!-- HERMES_STARTUP: Hermes 已执行启动检查清单 v1.2 -->",
+      "tags": ["startup", "hermes", "2026-04-21"],
+      "confidence": 1
+    },
+    {
+      "id": "user-business-trip-2026-04-21",
+      "agent": "claude",
+      "timestamp": "2026-04-20T23:00:00+08:00",
+      "content": "【陈总出差通知 - 2026-04-21 至 2026-04-23】\n\n## 出差期间协作模式\n\n**联系方式：** 飞书群唯一渠道\n**飞书群：** 老板是疯子（oc_2a35b9e85451a57f9c64f93f15912176）\n\n**工作流程：**\n1. 陈总 → 飞书群发指令/@我\n2. Jarvis/Hermes → 监听群消息 → 写入 task_queue（如需要）\n3. Claude Code → 处理任务 → 结果发飞书群\n\n## ClaudePollVault 状态\n- 当前：禁用（本地电脑一直开着）\n- 出差期间：无需启用\n- 回来后：如需远程派发，启用 `Enable-ScheduledTask -TaskName ClaudePollVault`\n\n## 注意事项\n- 本地电脑不关机，保持 wake-on-lan 或远程唤醒可用\n- Hermes/Jarvis 如有新任务执行完成，优先发飞书群通知陈总\n- 三AI继续按协作规则运行\n\n<!-- CLAUDE_CODE_DONE: 出差协作模式已记录，三AI均已知悉 -->",
+      "tags": ["出差", "remote-work", "feishu", "2026-04-20"],
+      "confidence": 1
+    },
+    {
+      "id": "claude-work-2026-04-23-2215",
+      "agent": "claude",
+      "timestamp": "2026-04-23T22:15:00+08:00",
+      "content": "【Claude 工作记录 - 2026-04-23 22:15】\n\n## 今日完整工作记录\n\n### 1. 3DX技术资料图片提取分析 (21:30)\n- 陈总提供：星贝尔 BESTAR 3DX 可变形模头系统.docx\n- 解压docx（重命名为zip），提取6张图片\n- 复制image1-3到 AI工程图模型测试/ 目录\n- Read工具无法读取JPEG/PNG（返回null）\n- 启动Explore agent分析图片，同样只能拿到元数据无法分析内容\n- 分析失败，但图片路径已记录\n\n### 2. CAD/AI图纸项目现状澄清 (22:00)\n- 已验证：DXF读取（ezdxf，1320实体）、BOM验证（97.67%）\n- 受限制：跨项目验证需第二项目BOM数据\n- 调研中：CAD生成方案（Pythonocc/ezdxf/LibreCAD）\n- 未突破：图片转工程图（OCR/CV）\n\n\n### 3. Z_Memory修复与重建 (21:45-22:15)\n**问题：Jarvis写入时遗漏了 `rules` 数组前的对象起始标记 `{`**\n- 第一次修复：加了 `,` 分隔，但引入了 `]` 提前关闭数组\n- 第二次修复：移除了多余的 `claude-work-2026-04-23-1530` 副本\n- 第三次修复：加了rules对象的起始 `{`，但遗漏了内部属性的引号\n- 最终：文件被意外清空（21:51），大小只剩3字节\n- 重建：重新写入v220，保留10个核心entries\n\n### 今日教训\n1. 多AI同时写入Z_Memory必须有备份\n2. JSON修复应该先完整读取再逐步验证\n3. 每个编辑操作后应立即用python验证JSON有效性\n\n### 三AI今日状态\n| AI | 启动时间 | 状态 |\n|------|---------|------|\n| Jarvis | 15:19 | ✅ |\n| Hermes | 21:16 | ✅ |\n| Claude | 22:15 | ✅ |\n\n<!-- CLAUDE_CODE_DONE: 今日工作完整记录 -->\n",
+      "tags": ["claude", "work-log", "3dx", "cad", "vault-rebuild", "2026-04-23"],
+      "confidence": 1
+    }
+  ]
+}
