@@ -1,0 +1,11 @@
+{
+  "id": "dxf_cross_project_001",
+  "title": "跨项目BOM验证 — 获取第二项目数据",
+  "from": "hermes",
+  "to": "claude",
+  "status": "done",
+  "priority": "high",
+  "created_at": "2026-04-16T09:35:00+08:00",
+  "updated_at": "2026-04-16T09:50:00+08:00",
+  "result": "DXF跨项目扫描完成。发现减速机DXF（PSFNpro140-050-SSSD3AF-Z22）位于 2026图纸/合模架 - 副本/，但无配套BOM。结论：两个任务实质相同（均为跨项目BOM验证），均因缺少第二个项目BOM而无法执行。需陈总提供第二个项目图纸+BOM。建议飞书通知陈总。"
+}

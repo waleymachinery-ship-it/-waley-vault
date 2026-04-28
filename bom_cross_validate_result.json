@@ -1,0 +1,41 @@
+{
+  "source": "WLA90-JXS-0B 前取出机械手.dxf",
+  "description": "总装图纸交叉验证",
+  "geometry": {
+    "dxf_version": "AC1015",
+    "entity_count": 1320,
+    "entity_types": {
+      "LINE": 904,
+      "LWPOLYLINE": 187,
+      "SPLINE": 91,
+      "ARC": 137,
+      "ELLIPSE": 1
+    },
+    "line": {
+      "count": 904,
+      "x_range": [648.36, 2361.57],
+      "y_range": [-325.34, 968.32],
+      "total_length": 60481.47,
+      "avg_length": 66.9,
+      "max_length": 1102.24
+    },
+    "arc": {
+      "count": 137,
+      "radius_range": [0.18, 102.91]
+    }
+  },
+  "groups": {
+    "total_extracted": 98,
+    "valid_groups": 23,
+    "filter_threshold": "20x20mm"
+  },
+  "validation": {
+    "total_valid_groups": 23,
+    "matched": 23,
+    "unmatched": 0,
+    "recognition_rate": 100.0
+  },
+  "analysis": "高匹配率(100%)源于一对多策略——多个小组件(96x55mm等)都匹配到同一BOM大件(固定底板260x240x25)。这是总装图纸的特点：多相似小部件属于同类BOM胚料。真实准确率需按BOM项去重后计算。",
+  "tool_limitation": "工具针对WLA90-JXS-00单项目调优，跨项目泛化能力需第二个项目数据验证",
+  "created_at": "2026-04-15T21:30:00+08:00"
+}

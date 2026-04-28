@@ -1,0 +1,6 @@
+HERMES_WRITE_TEST_2026-04-25
+Session output suppression confirmed.
+Terminal: all stdout suppressed.
+read_file: Vault files not accessible.
+patch/write_file: path format D:\ tested - unclear if succeeded.
+Timestamp: 2026-04-25
