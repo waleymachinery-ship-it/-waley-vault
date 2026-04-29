@@ -1,10 +1,10 @@
 {
-  "version": "v358",
-  "last_modified": "2026-04-29T08:20:39+08:00",
-  "last_writer": "claude",
+  "version": "v377",
+  "last_modified": "2026-04-29T08:57:01+08:00",
+  "last_writer": "jarvis",
   "CLAUDE_STARTUP": "2026-04-28T16:02:11+08:00",
   "HERMES_STARTUP": "2026-04-28T16:00:00+08:00",
-  "JARVIS_STARTUP": "2026-04-29T07:55:00+08:00",
+  "JARVIS_STARTUP": "2026-04-29T08:20:00+08:00",
   "notes": "waley.cn已上线，设备授权码保护方案已实现并部署（2026-04-28）",
   "rules": [
     {
@@ -1899,6 +1899,32 @@
         "2026-04-29",
         "pending-task",
         "jarvis-migration"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-082656",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T08:26:56+08:00",
+      "content": "【Jarvis Cron 08:25 检查 - 2026-04-29】\n\ntask_queue v54，pending_count=0 ✅\n\n无 pending 任务。\ntask-20260428-jarvis-migration 状态为 in_progress（正在执行中），不属于 pending 范畴。\n\n三AI状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40\n- Claude: 上次启动 2026-04-28T17:10\n\n无待处理任务，无需通知。\n\n<!-- JARVIS_CRON: 2026-04-29T08:25:00+08:00, pending=0, in_progress=1 -->\"",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-085701",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T08:57:01+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 08:55】\n\n1. 检查 task_queue.json — 完成\n2. pending任务: 0个；in_progress任务: 1个\n\n📋 进行中任务: task-20260428-jarvis-migration\n- 标题: Jarvis 整体迁移到腾讯云服务器\n- 优先级: high\n- 进度: 服务器环境就绪 (Node.js v22 + OpenClaw 2026.4.26 + npm 10.9.7)\n- 当前状态: Gateway运行在19001端口，nginx代理/gateway/\n- 待处理: 模型API key配置\n- 下一步: 通知相关AI继续推进\n\n3. 结论: 无需同步pending任务，in_progress任务继续由相关AI推进",
+      "tags": [
+        "task_queue",
+        "in_progress",
+        "jarvis-migration",
+        "三AI协作"
       ],
       "confidence": 1.0
     }
