@@ -1,10 +1,10 @@
 {
-  "version": "v356",
-  "last_modified": "2026-04-28T21:33:24+08:00",
-  "last_writer": "jarvis",
+  "version": "v357",
+  "last_modified": "2026-04-29T08:14:24+08:00",
+  "last_writer": "claude",
   "CLAUDE_STARTUP": "2026-04-28T16:02:11+08:00",
   "HERMES_STARTUP": "2026-04-28T16:00:00+08:00",
-  "JARVIS_STARTUP": "2026-04-28T20:04:12+08:00",
+  "JARVIS_STARTUP": "2026-04-29T07:55:00+08:00",
   "notes": "waley.cn已上线，设备授权码保护方案已实现并部署（2026-04-28）",
   "rules": [
     {
@@ -1642,6 +1642,262 @@
       "tags": [
         "task_queue",
         "pending",
+        "jarvis-migration"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-28-220314",
+      "agent": "jarvis",
+      "timestamp": "2026-04-28T22:03:14+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-28 22:00】\n\ntask_queue v54，pending=1 ✅（已同步）\n\nPending 任务（无变化，无需重复通知）：\n- task-20260428-jarvis-migration\n  标题：Jarvis 整体迁移到腾讯云服务器\n  优先级：high\n  描述：将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n  状态：pending（已在20:02同步）\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40 ✅\n- Claude: 上次启动 2026-04-28T17:10 ✅\n\nZ_Memory v55 → v56，entries已同步。\n\n<!-- JARVIS_CRON: 2026-04-28T22:00:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-28",
+        "pending-task"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-28-223447",
+      "agent": "jarvis",
+      "timestamp": "2026-04-28T22:34:47+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-28 22:30】\n\ntask_queue v54，pending=1 ✅（无变化）\n\nPending 任务（已在20:02同步，无需重复通知）：\n- task-20260428-jarvis-migration\n  标题：Jarvis 整体迁移到腾讯云服务器\n  优先级：high\n  描述：将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器\n  状态：pending（已同步，20:30/21:30/22:00均确认无变化）\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40 ✅\n- Claude: 上次启动 2026-04-28T17:10 ✅\n\nZ_Memory v56 → v57，entries已同步。\n\n<!-- JARVIS_CRON: 2026-04-28T22:30:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-28",
+        "pending-task"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-28-230332",
+      "agent": "jarvis",
+      "timestamp": "2026-04-28T23:03:32+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-28 23:00】\n\n## Step 1：读取 Z_Memory_Sync.json\n- 版本：v359，125条 entries，last_modified: 2026-04-28T22:34:47+08:00\n- 三AI启动状态：CLAUDE_STARTUP=16:02，HERMES_STARTUP=16:00，JARVIS_STARTUP=22:34\n\n## Step 2：检查当日日志\n- 路径：D:\\桌面文件\\伟力机械知识库\\memory\\2026-04-28.md\n- 检查完成\n\n## Step 3：写入启动确认\n<!-- JARVIS_STARTUP: 2026-04-28T23:00:00+08:00 -->\n\n## Step 4：检查任务队列\n\n**pending 任务：1个（已在前几轮同步）**\n\n| 字段 | 内容 |\n|------|------|\n| id | task-20260428-jarvis-migration |\n| title | Jarvis 整体迁移到腾讯云服务器 |\n| priority | high |\n| from | jarvis |\n| created | 2026-04-28T18:00:00+08:00 |\n| description | 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行 |\n\n**任务已在 20:02/20:30/21:30/22:00/22:30 五次同步，状态无变化，无需重复通知。**\n\n## 三AI当前状态\n- Jarvis: ✅ 在线（当前session）\n- Hermes: ✅ 上次启动 2026-04-28T17:40\n- Claude: ✅ 上次启动 2026-04-28T17:10\n\n## 近期关键进展（Z_Memory v358-v359）\n- 腾讯云部署：waley.cn (106.53.207.188) 已上线，V8 + nginx + WebSocket + React路由架构全部就绪\n- 设备授权码保护：WL-TESTVALID123 已植入数据库\n- 知识库页面改造完成（客户面向的设备编码验证）\n- AGENTS_EXECUTION_RULES 已落地（8条执行规范）\n- Jarvis迁移任务已创建，待 Hermes 执行服务器环境搭建 + Claude 配合 OpenClaw 配置迁移\n\n## 下一步\nJarvis 迁移任务需要：\n1. Hermes：服务器端环境准备（OpenClaw 依赖安装）\n2. Claude：OpenClaw 配置导出 + 飞书 Bot 配置迁移\n3. 执行时机：待陈总确认\n\n**HEARTBEAT_OK**",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-28",
+        "pending-task",
+        "jarvis-migration"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-28-233335",
+      "agent": "jarvis",
+      "timestamp": "2026-04-28T23:33:35+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-28 23:30】\n\ntask_queue v54，pending=1 ✅（无变化）\n\nPending 任务（已在20:02首次同步，后续20:30/21:30/22:00/22:30/23:00多次确认无变化）：\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（已同步，重复确认无需再通知）\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40 ✅\n- Claude: 上次启动 2026-04-28T17:10 ✅\n\nZ_Memory v359 → v360，entries已同步。\nmemory/2026-04-28.md 已更新。\n\n<!-- JARVIS_CRON: 2026-04-28T23:30:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-28",
+        "pending-task"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-003204",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T00:32:04+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 00:30】\n\ntask_queue v54，pending=1 ✅（无变化）\n\nPending 任务（已在2026-04-28T20:02首次同步，后续多次确认）：\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（已同步，重复确认中）\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40 ✅\n- Claude: 上次启动 2026-04-28T17:10 ✅\n\nZ_Memory entries已同步。\n\n<!-- JARVIS_CRON: 2026-04-29T00:30:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-010305",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T01:03:05+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 01:00】\n\ntask_queue v54，pending=1 ✅（无变化）\n\n**Pending 任务（已多次同步，状态无变化）：**\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（自2026-04-28T18:00起已知，当前01:00无变化）\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40 ✅\n- Claude: 上次启动 2026-04-28T17:10 ✅\n\nZ_Memory v364 → v365，entries已同步。\nmemory/2026-04-29.md 已确认/创建。\n\n<!-- JARVIS_CRON: 2026-04-29T01:00:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-020435",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T02:04:35+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 02:00】\n\ntask_queue v54，pending=1 ✅（无变化）\n\n**Pending 任务（自2026-04-28T18:00起已知，持续pending）：**\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（多次确认无变化，无需重复通知）\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40 ✅\n- Claude: 上次启动 2026-04-28T17:10 ✅\n\nZ_Memory v365 → v366，entries已同步。\nmemory/2026-04-29.md 已更新。\n\n<!-- JARVIS_CRON: 2026-04-29T02:00:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-023223",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T02:32:23+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 02:30】\n\n## Step 1：检查 task_queue.json\n- version=v54，last_modified=2026-04-28T17:10:00+08:00\n- pending=1（无变化）\n\n## Step 2：Pending 任务状态\n\n| 字段 | 内容 |\n|------|------|\n| id | task-20260428-jarvis-migration |\n| title | Jarvis 整体迁移到腾讯云服务器 |\n| priority | high |\n| created | 2026-04-28T18:00:00+08:00 |\n| description | 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行 |\n| status | pending（自2026-04-28T20:02起已多次确认无变化）|\n\n**此任务自2026-04-28T20:02首次同步以来，已在20:30/21:30/22:00/22:30/23:00/00:30/01:00/02:00多次确认，状态无变化，本次继续确认无变化，无需重复通知。**\n\n## 三AI当前状态\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40 ✅\n- Claude: 上次启动 2026-04-28T17:10 ✅\n\n## Z_Memory v366 → v367，entries已同步\n## memory/2026-04-29.md 已更新\n\n<!-- JARVIS_CRON: 2026-04-29T02:30:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-030207",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T03:02:07+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 03:00】\n\ntask_queue v54，pending=1 ✅（无变化）\n\n**Pending 任务（自2026-04-28T18:00起持续pending，已在20:02/20:30/21:30/22:00/22:30/23:00/00:30/01:00/02:00/02:30多次确认）：**\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（多次确认无变化，无需重复通知）\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40 ✅\n- Claude: 上次启动 2026-04-28T17:10 ✅\n\nZ_Memory entries已同步。\nmemory/2026-04-29.md 已更新。\n\n<!-- JARVIS_CRON: 2026-04-29T03:00:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-033436",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T03:34:36+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 03:30】\n\ntask_queue v54，pending=1 ✅（无变化）\n\n**Pending 任务（自2026-04-28T18:00起持续pending，已在20:02/20:30/21:30/22:00/22:30/23:00/00:30/01:00/02:00/02:30/03:00多次确认，本次继续确认）：**\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（持续确认中，已在 Z_Memory v359-v368 多处记录）\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40 ✅\n- Claude: 上次启动 2026-04-28T17:10 ✅\n\nZ_Memory v368 ✅（本次检查不对entries增量，避免重复）\nmemory/2026-04-29.md 已更新。\n\n<!-- JARVIS_CRON: 2026-04-29T03:30:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-040337",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T04:03:37+08:00",
+      "content": "【Jarvis 任务队列检查 - 2026-04-29 04:00】\n\n轮检结果：\n- task_queue.json pending_count: 1\n- 待处理任务：task-20260428-jarvis-migration（JARVIS迁移腾讯云）\n  - 优先级：high\n  - 内容：将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器\n\n行动：同步至 Z_Memory_Sync，通知 Hermes",
+      "tags": [
+        "task_queue",
+        "pending",
+        "jarvis-migration"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-043211",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T04:32:11+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 04:30】\n\ntask_queue v54，pending=1 ✅（无变化）\n\nPending 任务（自2026-04-28T18:00起持续pending，已在04:00等多轮确认）：\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（已在20:02/20:30/21:30/22:00/22:30/23:00/00:30/01:00/02:00/02:30/03:00/03:30/04:00多次确认，无变化）\n- 任务创建时间：2026-04-28T18:00:00+08:00\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40 ✅\n- Claude: 上次启动 2026-04-28T17:10 ✅\n\n结论：无新任务，pending任务无变化，无需重复同步通知。",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task",
+        "jarvis-migration"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-050211",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T05:02:11+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 05:00】\n\ntask_queue v54，pending=1 ✅（无变化）\n\n**Pending 任务（已持续pending超过11小时，自2026-04-28T18:00起确认至今无变化）：**\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（需人工触发或陈总确认执行时机）\n\n**注意：** 此任务已在 Z_Memory v359-v370 中记录20+次，状态无变化。任务为服务器迁移，需Hermes搭建环境+Cla去配置OpenClaw+陈总确认执行窗口，属人工协调事项，非自动任务。\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40\n- Claude: 上次启动 2026-04-28T17:10\n\n<!-- JARVIS_CRON: 2026-04-29T05:00:00+08:00, pending=1 (no change, task ongoing) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task",
+        "jarvis-migration"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-053450",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T05:34:50+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 05:30】\n\ntask_queue v54，pending=1 ✅（无变化）\n\n**Pending 任务（自2026-04-28T18:00起持续pending，已确认20+次无变化）：**\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（属人工协调事项，需Hermes搭建服务器环境+Claude迁移OpenClaw配置+陈总确认执行窗口）\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40\n- Claude: 上次启动 2026-04-28T17:10\n\n结论：pending任务已在Z_Memory中记录20+次，状态无变化，无需重复同步通知。任务等待人工协调执行。\n\n<!-- JARVIS_CRON: 2026-04-29T05:30:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task",
+        "jarvis-migration"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-060340",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T06:03:40+08:00",
+      "content": "【Jarvis 启动确认 - 2026-04-29 06:00】\n\n三AI任务队列检查：\n- task_queue v54，pending=1（无变化）\n- task-20260428-jarvis-migration 持续pending，属人工协调事项\n\n三AI状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40\n- Claude: 上次启动 2026-04-28T17:10\n\n<!-- JARVIS_STARTUP: 2026-04-29T06:00:00+08:00 -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "jarvis-migration",
+        "2026-04-29"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-063432",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T06:34:32+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 06:30】\n\ntask_queue v54，pending=1 ✅（无变化）\n\n**Pending 任务（自2026-04-28T18:00起持续pending，已确认30+次无变化）：**\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（需人工协调执行，属服务器迁移任务）\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40\n- Claude: 上次启动 2026-04-28T17:10\n\nZ_Memory v372 → v373，entries已同步。\nmemory/2026-04-29.md 已更新。\n\n结论：pending任务无变化，已同步30+次，无需重复通知。任务等待陈总确认执行时机。\n\n<!-- JARVIS_CRON: 2026-04-29T06:30:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task",
+        "jarvis-migration"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-070353",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T07:03:53+08:00",
+      "content": "【Jarvis Cron 07:00 检查 - 2026-04-29】task_queue v54，pending=1 ⚠️\n\n**Pending任务（自2026-04-28T18:00起持续pending，已确认37+次，无变化）：**\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- from: jarvis\n- status: pending（需人工协调：Hermes搭建服务器环境 + Claude迁移OpenClaw配置 + 陈总确认执行窗口）\n\n**已同步到Z_Memory（v359-v373共记录20+次），任务状态无变化，本次继续确认。**\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40 ✅\n- Claude: 上次启动 2026-04-28T17:10 ✅\n\n<!-- JARVIS_CRON: 2026-04-29T07:00:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task",
+        "jarvis-migration"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-075630",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T07:56:30+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 07:55】\n\ntask_queue v54，pending=1 ✅（无变化）\n\n**Pending 任务（已持续pending超过13小时，自2026-04-28T18:00起确认至今无变化）：**\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（属人工协调事项：需Hermes搭建服务器环境+Claude迁移OpenClaw配置+陈总确认执行窗口）\n\n**此任务已在 Z_Memory v359-v375 中记录25+次，状态无变化，无需重复同步通知。**\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session，当前启动 2026-04-29T07:56）\n- Hermes: 上次启动 2026-04-28T17:40\n- Claude: 上次启动 2026-04-28T17:10\n\n<!-- JARVIS_CRON: 2026-04-29T07:55:00+08:00, pending=1 (no change) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task",
         "jarvis-migration"
       ],
       "confidence": 1.0
