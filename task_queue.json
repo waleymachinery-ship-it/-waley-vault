@@ -467,8 +467,9 @@
       "priority": "high",
       "created": "2026-04-28T18:00:00+08:00",
       "description": "将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行",
-      "updated_at": "2026-04-29T00:30:00+08:00",
-      "notes": "服务器环境就绪: Node.js v22.22.2 + OpenClaw 2026.4.26 + npm 10.9.7。waley-backend 已重启。下一步: OpenClaw gateway 配置。"
+      "updated_at": "2026-04-29T00:50:00+08:00",
+      "notes": "服务器环境就绪: Node.js v22.22.2 + OpenClaw 2026.4.26 + npm 10.9.7。waley-backend 已重启。下一步: OpenClaw gateway 配置。",
+      "progress": "服务器环境就绪: Node.js v22 + OpenClaw 2026.4.26 + npm 10.9.7。Gateway运行在19001端口，nginx代理/gateway/。待配置: 模型API key。"
     }
   ]
 }
