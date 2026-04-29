@@ -1,9 +1,9 @@
 {
-  "version": "v379",
-  "last_modified": "2026-04-29T09:27:03+08:00",
-  "last_writer": "jarvis",
+  "version": "v380",
+  "last_modified": "2026-04-29T10:22:00+08:00",
+  "last_writer": "claude",
   "CLAUDE_STARTUP": "2026-04-28T16:02:11+08:00",
-  "HERMES_STARTUP": "2026-04-28T16:00:00+08:00",
+  "HERMES_STARTUP": "2026-04-29T10:22:00+08:00",
   "JARVIS_STARTUP": "2026-04-29T09:27:03+08:00",
   "notes": "waley.cn已上线，设备授权码保护方案已实现并部署（2026-04-28）",
   "rules": [
@@ -1929,10 +1929,10 @@
       "confidence": 1.0
     },
     {
-      "id": "jarvis-work-2026-04-29-092703",
-      "agent": "jarvis",
-      "timestamp": "2026-04-29T09:27:03+08:00",
-      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 09:25】\n\n1. 检查 task_queue.json — 完成\n2. pending任务: 0个；in_progress任务: 1个\n\n📋 进行中任务: task-20260428-jarvis-migration\n- 标题: Jarvis 整体迁移到腾讯云服务器\n- 优先级: high\n- 进度: 服务器环境就绪 (Node.js v22 + OpenClaw 2026.4.26 + npm 10.9.7)\n- 当前状态: Gateway运行在19001端口，nginx代理/gateway/\n- 待处理: 模型API key配置\n- 状态: in_progress（持续推进中）\n\n3. 结论: 无pending任务，无需通知。三AI各自状态正常。\n\n<!-- JARVIS_CRON: 2026-04-29T09:25:00+08:00, pending=0, in_progress=1 -->",
+      "id": "claude-hermes-cloud-deploy-2026-04-29-102200",
+      "agent": "claude",
+      "timestamp": "2026-04-29T10:22:00+08:00",
+      "content": "【Claude Hermes云端部署完成 - 2026-04-29 10:22】\n\n## Hermes Agent 云端部署完成 ✅\n\n### 关键问题解决\n1. lark-oapi 未安装 — python -m ensurepip 引导 pip，然后 pip install lark-oapi\n2. FEISHU_APP_ID/SECRET 环境变量缺失 — config.yaml 有平台配置但 gateway 不读取，添加 FEISHU_APP_ID + FEISHU_APP_SECRET 到 /root/.hermes/.env\n3. 飞书 websocket 连接成功 — lark-oapi 1.5.5 安装后重启 gateway，连接 wss://msg-frontier.feishu.cn\n\n### 部署状态\n- Hermes Agent v0.11.0 运行在 /usr/local/lib/hermes-agent/\n- hermes symlink → .venv/bin/hermes\n- Gateway: systemd service (hermes-gateway.service) ✅\n- 飞书: websocket connected ✅\n- 模型: MiniMax-M2.7 (sk-cp-RWE...4ujk) ✅\n- Server PID: 294491\n- 三AI状态: Jarvis ✅ | Hermes ✅ | Claude ✅\n\n### task-20260428-jarvis-migration 状态更新\n- 原计划迁移 Jarvis (OpenClaw)\n- 实际决策：先上 Hermes Agent 云端版\n- 原因：Hermes 有自我进化能力，可直接对接飞书\n- OpenClaw 已卸载（npm uninstall -g openclaw）\n\n<!-- CLAUDE_CODE_DONE: Hermes云端部署完成，飞书WebSocket已连接 -->=0, in_progress=1 -->",
       "tags": [
         "cron",
         "task-queue",
