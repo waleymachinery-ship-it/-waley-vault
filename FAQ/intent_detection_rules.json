@@ -1,0 +1,106 @@
+{
+  "version": "2.0",
+  "created_at": "2026-04-18T23:00:00+08:00",
+  "description": "意向识别规则 v2.0 - 只在高意向购买信号触发Leads收集",
+
+  "purchase_signals": {
+    "description": "高意向购买信号 — 触发Leads收集",
+    "keywords": [
+      "报价单", "要报价", "正式报价",
+      "能发资料吗", "发份资料", " brochure", "样本", "样品",
+      "来厂参观", "看厂", "考察", "实地看",
+      "最小起订量", "MOQ", "多少起订",
+      "付款方式", "月结", "信用证", "LC"
+    ],
+    "threshold": 1,
+    "action": "collect_leads"
+  },
+
+  "purchase_inquiry_signals": {
+    "description": "一般购买咨询 — 只回复FAQ，不触发Leads",
+    "keywords": [
+      "价格", "多少钱", "报价", "售价", "买", "订购", "订单",
+      "交货期", "交期", "周期", "什么时候能到", "几天",
+      "定金", "首付", "尾款",
+      "规格", "参数",
+      "保修", "质保", "warranty", "保修期"
+    ],
+    "threshold": 1,
+    "action": "reply_only"
+  },
+
+  "fault_signals": {
+    "description": "触发故障报告流程的关键词",
+    "keywords": [
+      "报警", "不工作", "故障", "坏了", "出问题", "出问题",
+      "漏气", "壁厚不均", "黑点", "黄线", "表面缺陷", "气泡",
+      "声音异常", "振动", "异响", "噪音", "噪声",
+      "不出料", "出料慢", "堵料", "堵死",
+      "紧急", "急停", "危险", "事故",
+      "修", "维修", "售后", "换", "配件",
+      "卡", "卡住", "停止", "停机", "跳闸",
+      "焦", "烧", "糊", "味道", "冒烟"
+    ],
+    "threshold": 1,
+    "action": "route_to_fault_report"
+  },
+
+  "technical_signals": {
+    "description": "技术咨询类关键词",
+    "keywords": [
+      "温度", "压力", "参数", "怎么调", "设置", "设定",
+      "材料", "PE", "PP", "PVC", "PET", "干燥", "烘料",
+      "壁厚", "吹胀比", "换色", "清洗",
+      "开机", "关机", "操作", "流程", "步骤",
+      "螺杆", "模头", "模具", "料筒",
+      "三层", "双层", "共挤", "多层",
+      "化工桶", "IBC", "吨桶", "水桶", "储罐",
+      "WLA", "WLU", "WLH", "机型", "系列"
+    ],
+    "threshold": 1,
+    "action": "route_to_knowledge_base"
+  },
+
+  "maintenance_signals": {
+    "description": "维护保养类关键词",
+    "keywords": [
+      "保养", "润滑", "维护", "清洁", "检查", "检修",
+      "配件", "轴承", "皮带", "密封", "油封", "过滤器",
+      "换油", "加油", "液压油", "齿轮油", "润滑脂",
+      "半年", "季度", "年度", "大修", "小修",
+      "存放", "停机", "防锈", "长期", "不用"
+    ],
+    "threshold": 1,
+    "action": "route_to_knowledge_base"
+  },
+
+  "greeting_signals": {
+    "description": "问候语",
+    "keywords": [
+      "你好", "您好", "在吗", "在不在", "哈喽", "hello", "hi",
+      "早上好", "下午好", "晚上好", "晚上", "嗨"
+    ],
+    "threshold": 1,
+    "action": "show_greeting"
+  },
+
+  "thanks_signals": {
+    "description": "感谢语",
+    "keywords": [
+      "谢谢", "感谢", "明白了", "知道了", "好的", "OK", "okay",
+      "明白了", "清楚了", "好的"
+    ],
+    "threshold": 1,
+    "action": "acknowledge"
+  },
+
+  "negative_signals": {
+    "description": "否定/取消",
+    "keywords": [
+      "不用了", "不需要", "算了", "取消", "no", "not now",
+      "暂时不需要", "先不"
+    ],
+    "threshold": 1,
+    "action": "dismiss_leads"
+  }
+}

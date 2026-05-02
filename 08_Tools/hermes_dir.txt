@@ -1,0 +1,8 @@
+SOUL.md
+auth.json
+auth.lock
+config.yaml
+cron
+logs
+memories
+sessions

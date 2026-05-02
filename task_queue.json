@@ -1,10 +1,22 @@
 {
   "last_writer": "claude",
-  "last_modified": "2026-04-28T17:10:00+08:00",
+  "last_modified": "2026-04-30T15:15:00+08:00",
   "CLAUDE_CODE_DONE": "2026-04-28T17:10:00+08:00",
   "HERMES_CODE_DONE": "2026-04-19T22:45:00+08:00",
-  "version": "v54",
+  "version": "v55",
   "tasks": [
+    {
+      "id": "task-20260430-001",
+      "from": "claude",
+      "to": "hermes",
+      "type": "feature",
+      "status": "pending",
+      "priority": "high",
+      "created_at": "2026-04-30T15:15:00+08:00",
+      "title": "V8 AI 两级自学习机制 - 实时记忆 + 定期归纳",
+      "description": "实现第二级自学习：每天凌晨Cron触发，聚合访客对话生成客户画像，检测高频FAQ并自动更新知识库，检测急买信号触发飞书预警。详见vault: memory/V8_AI_Session_Memory_20260430.md",
+      "notes": "计划今晚2026-04-30实施"
+    },
     {
       "id": "task-20260414-009",
       "from": "claude",

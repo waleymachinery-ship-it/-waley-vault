@@ -1,0 +1,30 @@
+{
+  "test_id": "dialogue_test_002",
+  "started_at": "2026-04-18T09:01:00+08:00",
+  "scenario": "模拟用户咨询PE工艺参数",
+  "messages": [
+    {
+      "id": 1,
+      "from": "user",
+      "channel": "wechat",
+      "content": "PE材料一般用多少温度？",
+      "timestamp": "2026-04-18T09:01:05+08:00"
+    },
+    {
+      "id": 2,
+      "from": "ai",
+      "content": "PE（聚乙烯）典型加工温度：\n\n| 区域 | 温度范围 |\n|------|----------|\n| 料筒区 | 180-220°C |\n| 熔体区 | 200-260°C |\n| 模头 | 200-280°C |\n\n注意：具体温度根据材料型号和制品要求调整，新机型调试时建议从偏低温度开始逐步升高。",
+      "source": "FAQ/03_工艺参数.md",
+      "confidence": 0.98,
+      "timestamp": "2026-04-18T09:01:08+08:00"
+    }
+  ],
+  "steps": [
+    {"step": 1, "action": "用户发消息", "status": "done"},
+    {"step": 2, "action": "AI检索FAQ知识库", "status": "done"},
+    {"step": 3, "action": "生成回答并发送", "status": "done"},
+    {"step": 4, "action": "更新对话记录", "status": "done"}
+  ],
+  "status": "completed",
+  "completed_at": "2026-04-18T09:01:10+08:00"
+}

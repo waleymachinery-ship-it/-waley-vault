@@ -1,0 +1,1 @@
+python -c "import ezdxf; print('ezdxf OK:', ezdxf.__version__)"

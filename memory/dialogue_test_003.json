@@ -1,0 +1,33 @@
+{
+  "test_id": "dialogue_test_003",
+  "started_at": "2026-04-18T09:02:00+08:00",
+  "scenario": "用户咨询E01报警代码",
+  "messages": [
+    {
+      "id": 1,
+      "from": "user",
+      "channel": "wechat",
+      "content": "设备报警显示E01是什么问题？",
+      "timestamp": "2026-04-18T09:02:05+08:00"
+    },
+    {
+      "id": 2,
+      "from": "ai",
+      "content": "抱歉，知识库中暂无E01报警代码的具体说明。\n\n请提供：\n1. 设备型号\n2. 报警时其他现象\n\n或直接联系售后服务：138-2968-XXXX",
+      "source": null,
+      "confidence": 0,
+      "fallback": true,
+      "timestamp": "2026-04-18T09:02:08+08:00"
+    }
+  ],
+  "steps": [
+    {"step": 1, "action": "用户发消息", "status": "done"},
+    {"step": 2, "action": "AI检索FAQ知识库", "result": "未找到E01匹配", "status": "done"},
+    {"step": 3, "action": "降级处理-转人工", "status": "done"},
+    {"step": 4, "action": "生成回答并发送", "status": "done"},
+    {"step": 5, "action": "更新对话记录", "status": "done"}
+  ],
+  "status": "completed",
+  "completed_at": "2026-04-18T09:02:10+08:00",
+  "note": "E01报警代码未录入知识库，建议补充"
+}

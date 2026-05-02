@@ -1,0 +1,75 @@
+{
+  "version": 2,
+  "last_modified": "2026-04-26T22:30:00+08:00",
+  "project": "伟力机械AI协作系统",
+  "current_phase": "三AI稳定运转期",
+  "completed": [
+    "三AI协作闭环（Jarvis/Hermes/Claude）",
+    "task_queue v51 上线",
+    "战情评估机制上线",
+    "Z_Memory v288 正常",
+    "工程图AI阶段4 MVP完成（97.67%识别率）",
+    "BOM验证工具标准化（08_Tools/BOM验证工具/）",
+    "官网V8版本落地页完成",
+    "6个子页面完成（WLA/WLU/WLM/关于/技术/对比）",
+    "SEO关键词库（7类154词）",
+    "sitemap.xml生成",
+    "waley-agent-backend独立化改造完成",
+    "故障排查系统知识库准备完成（fault_records_index.json）",
+    "P1-1 CrewAI/LangGraph对比完成（推荐LangGraph）",
+    "claude-mem stale PID修复",
+    "memtensor 4bug修复",
+    "Claude启动协议v1.0建立"
+  ],
+  "pending_blockers": [
+    {
+      "id": "pb-001",
+      "description": "工程图AI：需第二项目DXF+BOM数据才能做跨项目验证",
+      "owner": "陈总",
+      "status": "blocked"
+    },
+    {
+      "id": "pb-002",
+      "description": "网页会话界面：LangGraph架构待陈总确认后开发",
+      "owner": "陈总",
+      "status": "blocked"
+    },
+    {
+      "id": "pb-003",
+      "description": "Waley backend：需手动重启（localhost:3000无响应）",
+      "owner": "Claude",
+      "status": "pending"
+    },
+    {
+      "id": "pb-004",
+      "description": "MiniMax SFT微调：API不支持，需迁移到硅基流动/火山引擎/阿里云百炼",
+      "owner": "陈总",
+      "status": "blocked"
+    }
+  ],
+  "next_actions": [
+    {
+      "id": "na-001",
+      "description": "人工核对阶段4'待定'项",
+      "priority": "high",
+      "owner": "用户",
+      "status": "pending"
+    },
+    {
+      "id": "na-002",
+      "description": "确认网页会话界面技术方案（LangGraph）",
+      "priority": "high",
+      "owner": "陈总",
+      "status": "pending"
+    },
+    {
+      "id": "na-003",
+      "description": "重启Waley backend（npm run dev）",
+      "priority": "medium",
+      "owner": "Claude",
+      "status": "pending"
+    }
+  ],
+  "last_review": "2026-04-26T22:30:00+08:00",
+  "next_review": "2026-04-27T22:30:00+08:00"
+}

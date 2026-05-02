@@ -1,0 +1,81 @@
+{
+  "version": "1.0",
+  "created_at": "2026-04-18T22:45:00+08:00",
+  "description": "FAQ检索接口 - Claude调用专用",
+  "usage": "Claude在处理客户消息时调用此接口，传入客户消息文本，返回匹配的FAQ记录",
+
+  "interface": {
+    "method": "function_call",
+    "input": "customer_message_text",
+    "output": "matched_faq_record"
+  },
+
+  "retrieval_logic": {
+    "step1_keyword_match": {
+      "description": "在客户消息中匹配FAQ.keywords",
+      "priority": "highest"
+    },
+    "step2_pattern_match": {
+      "description": "在客户消息中匹配FAQ.question_patterns",
+      "priority": "high"
+    },
+    "step3_category_fallback": {
+      "description": "按category分类检索（当关键词匹配失败时）",
+      "priority": "medium"
+    }
+  },
+
+  "function_signature": {
+    "name": "faq_retrieve",
+    "description": "从37条结构化FAQ中检索与客户消息最匹配的记录",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string",
+          "description": "客户发送的原始消息文本"
+        },
+        "intent_filter": {
+          "type": "string",
+          "description": "可选：按intent类型过滤（purchase/fault/technical/maintenance/contact）"
+        }
+      },
+      "required": ["message"]
+    }
+  },
+
+  "return_format": {
+    "matched": true,
+    "faq": {
+      "id": "faq-XXX",
+      "category": "类别",
+      "answer": "标准回答",
+      "response_type": "quick_reply | detailed",
+      "follow_up": "追问引导（可选）",
+      "leads_trigger": true,
+      "fault_related": false
+    }
+  },
+
+  "intent_detection": {
+    "description": "优先检测客户意图，再进行FAQ检索",
+    "signals": {
+      "purchase": ["价格", "多少钱", "报价", "买", "订购", "交货期", "规格", "能发资料吗"],
+      "fault": ["报警", "故障", "坏了", "黑点", "黄线", "壁厚不均", "不出料", "漏气", "振动"],
+      "technical": ["温度", "压力", "参数", "材料", "PE", "PP", "壁厚", "吹胀比", "开机", "操作"],
+      "maintenance": ["保养", "润滑", "清洁", "检查", "配件", "轴承", "换油"]
+    }
+  },
+
+  "response_templates": {
+    "greeting": "您好！我是伟力机械智能助手，请问有什么可以帮您？",
+    "unknown": "抱歉，我没能理解您的问题。您可以问我关于产品选型、工艺参数、故障处理或维护保养方面的问题。",
+    "leads_prompt": "为了更好地为您服务，请留下您的联系方式：姓名、公司、电话、感兴趣的产品。"
+  },
+
+  "files": {
+    "faq_data": "D:/桌面文件/伟力机械知识库/FAQ/chat_knowledge_base_v2.json",
+    "intent_rules": "D:/桌面文件/伟力机械知识库/FAQ/intent_detection_rules.json",
+    "fault_records": "D:/桌面文件/伟力机械知识库/故障处理/fault_records_index.json"
+  }
+}

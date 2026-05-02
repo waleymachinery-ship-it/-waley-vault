@@ -1,0 +1,4 @@
+
+  Approved! User ou_cf8f849148e0839728e5ec4a67627221 on feishu can now use the bot~
+  They'll be recognized automatically on their next message.
+

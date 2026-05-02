@@ -1,0 +1,31 @@
+{
+  "test_id": "dialogue_test_005",
+  "started_at": "2026-04-18T09:04:00+08:00",
+  "scenario": "用户追问交货期（多轮对话）",
+  "messages": [
+    {
+      "id": 1,
+      "from": "user",
+      "channel": "wechat",
+      "content": "那交货期要多久？",
+      "context_from": "dialogue_test_004",
+      "timestamp": "2026-04-18T09:04:05+08:00"
+    },
+    {
+      "id": 2,
+      "from": "ai",
+      "content": "100L双层共挤机型属于非标配置，\n\n交货期：8-12 周\n\n具体交货期根据订单确认后的生产安排。",
+      "source": "FAQ/02_价格咨询.md",
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T09:04:08+08:00"
+    }
+  ],
+  "steps": [
+    {"step": 1, "action": "用户追问", "status": "done"},
+    {"step": 2, "action": "关联上下文（上一轮：100L双层）", "status": "done"},
+    {"step": 3, "action": "检索交货期信息", "status": "done"},
+    {"step": 4, "action": "生成回答", "status": "done"}
+  ],
+  "status": "completed",
+  "completed_at": "2026-04-18T09:04:10+08:00"
+}

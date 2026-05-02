@@ -1,0 +1,62 @@
+{
+  "easyocr": {
+    "3dx_image1.jpeg": {
+      "items": [],
+      "count": 0
+    },
+    "3dx_image2.png": {
+      "items": [
+        {
+          "text": "棋嘣",
+          "confidence": 0.13262174201273225
+        },
+        {
+          "text": "内芯棒",
+          "confidence": 0.4712070929532862
+        },
+        {
+          "text": "模头",
+          "confidence": 0.4792777080075385
+        },
+        {
+          "text": "外筒",
+          "confidence": 0.9078467392193548
+        },
+        {
+          "text": "流道筒",
+          "confidence": 0.9687930134101802
+        },
+        {
+          "text": "分流芯",
+          "confidence": 0.20110619051285875
+        },
+        {
+          "text": "芯棋",
+          "confidence": 0.1643125030784379
+        },
+        {
+          "text": "口桢",
+          "confidence": 0.049904688152580076
+        },
+        {
+          "text": "调节螺钉",
+          "confidence": 0.927384078502655
+        },
+        {
+          "text": "调节垫片",
+          "confidence": 0.5157478451728821
+        }
+      ],
+      "count": 10
+    },
+    "3dx_image3.png": {
+      "items": [
+        {
+          "text": "7542",
+          "confidence": 0.04350960627198219
+        }
+      ],
+      "count": 1
+    }
+  }
+}

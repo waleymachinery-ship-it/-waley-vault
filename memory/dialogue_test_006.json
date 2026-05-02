@@ -1,0 +1,32 @@
+{
+  "test_id": "dialogue_test_006",
+  "started_at": "2026-04-18T09:05:00+08:00",
+  "scenario": "用户咨询ABS材料适配性",
+  "messages": [
+    {
+      "id": 1,
+      "from": "user",
+      "channel": "wechat",
+      "content": "你们设备能用ABS材料吗？",
+      "timestamp": "2026-04-18T09:05:05+08:00"
+    },
+    {
+      "id": 2,
+      "from": "ai",
+      "content": "抱歉，知识库中暂无ABS材料的加工参数说明。\n\nABS（丙烯腈-丁二烯-苯乙烯）通常需要较高的加工温度（220-260°C）。\n\n建议直接联系技术支持确认，微信：138-2968-XXXX",
+      "source": null,
+      "confidence": 0,
+      "fallback": true,
+      "timestamp": "2026-04-18T09:05:08+08:00"
+    }
+  ],
+  "steps": [
+    {"step": 1, "action": "用户发消息", "status": "done"},
+    {"step": 2, "action": "AI检索FAQ知识库", "result": "ABS未收录", "status": "done"},
+    {"step": 3, "action": "通用知识补充", "status": "done"},
+    {"step": 4, "action": "转人工建议", "status": "done"}
+  ],
+  "status": "completed",
+  "completed_at": "2026-04-18T09:05:10+08:00",
+  "note": "ABS材料未录入知识库，建议补充"
+}

@@ -1,0 +1,131 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "C:\\Users\\pc\\.openclaw\\workspace",
+      "models": {
+        "minimax/MiniMax-M2.7": {
+          "alias": "Minimax"
+        }
+      },
+      "model": {
+        "primary": "minimax/MiniMax-M2.7"
+      },
+      "compaction": {
+        "mode": "safeguard"
+      }
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token",
+      "token": "05438846d0368d91428a2bc1ab0bc581afc79a4ae864b355"
+    }
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.4.9",
+    "lastTouchedAt": "2026-04-10T13:31:10.493Z"
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "minimax": {
+        "baseUrl": "https://api.minimaxi.com/anthropic",
+        "models": [
+          {
+            "id": "MiniMax-M2.7",
+            "name": "MiniMax M2.7",
+            "reasoning": true,
+            "input": [
+              "text",
+              "image"
+            ],
+            "cost": {
+              "input": 0.3,
+              "output": 1.2,
+              "cacheRead": 0.06,
+              "cacheWrite": 0.375
+            },
+            "contextWindow": 204800,
+            "maxTokens": 131072
+          }
+        ],
+        "api": "anthropic-messages",
+        "authHeader": true
+      }
+    }
+  },
+  "auth": {
+    "profiles": {
+      "minimax:cn": {
+        "provider": "minimax",
+        "mode": "api_key"
+      }
+    }
+  },
+  "wizard": {
+    "lastRunAt": "2026-04-10T08:33:32.295Z",
+    "lastRunVersion": "2026.4.9",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
+  },
+  "channels": {
+    "openclaw-weixin": {
+      "dmPolicy": "open",
+      "allowFrom": [
+        "*"
+      ],
+      "channelConfigUpdatedAt": "2026-04-10T09:54:49.477Z"
+    },
+    "feishu": {
+      "dmPolicy": "open",
+      "allowFrom": [
+        "*"
+      ],
+      "appId": "cli_a942303fdef99cd1",
+      "appSecret": "JrhR2ynU6ogqxZOgKNRxZdXz6Xq0Ot5r",
+      "enabled": true,
+      "groupPolicy": "open",
+      "requireMention": true
+    }
+  },
+  "plugins": {
+    "entries": {
+      "minimax": {
+        "enabled": true
+      },
+      "openclaw-weixin": {
+        "enabled": true
+      },
+      "feishu": {
+        "enabled": true
+      }
+    },
+    "installs": {
+      "openclaw-weixin": {
+        "source": "npm",
+        "spec": "@tencent-weixin/openclaw-weixin",
+        "installPath": "C:\\Users\\pc\\.openclaw\\extensions\\openclaw-weixin",
+        "version": "2.1.7",
+        "resolvedName": "@tencent-weixin/openclaw-weixin",
+        "resolvedVersion": "2.1.7",
+        "resolvedSpec": "@tencent-weixin/openclaw-weixin@2.1.7",
+        "integrity": "sha512-2x5/mbO2IVAsN4aUA41g6i8O84WIJCeFj8kwmB2pGjuxIBVy5FnEI5n52Pc5xroOLbxzW5FXN4cDtc/PvvKghg==",
+        "shasum": "94487d55a4e9e5e091e0997deaf4598f9c79bdba",
+        "resolvedAt": "2026-04-10T09:29:12.729Z",
+        "installedAt": "2026-04-10T09:29:25.563Z"
+      },
+      "@openclaw/feishu": {
+        "source": "npm",
+        "spec": "@openclaw/feishu",
+        "installPath": "C:\\Users\\pc\\.openclaw\\extensions\\@openclaw\\feishu",
+        "version": "2026.3.13",
+        "resolvedName": "@openclaw/feishu",
+        "resolvedVersion": "2026.3.13",
+        "resolvedSpec": "@openclaw/feishu@2026.3.13",
+        "resolvedAt": "2026-04-10T12:55:00.000Z",
+        "installedAt": "2026-04-10T12:55:00.000Z"
+      }
+    }
+  }
+}

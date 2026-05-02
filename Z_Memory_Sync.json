@@ -1,11 +1,11 @@
 {
-  "version": "v380",
-  "last_modified": "2026-04-29T10:22:00+08:00",
+  "version": "v384",
+  "last_modified": "2026-04-29T22:30:00+08:00",
   "last_writer": "claude",
   "CLAUDE_STARTUP": "2026-04-28T16:02:11+08:00",
   "HERMES_STARTUP": "2026-04-29T10:22:00+08:00",
-  "JARVIS_STARTUP": "2026-04-29T09:27:03+08:00",
-  "notes": "waley.cn已上线，设备授权码保护方案已实现并部署（2026-04-28）",
+  "JARVIS_STARTUP": "2026-04-29T12:27:18+08:00",
+  "notes": "三AI架构已更新：Hermes云端(106.53.207.188)，Jarvis本地，Claude本地。Hermes三路调用：飞书Bot/V8悬浮助手/waley-agent-backend AI诊断",
   "rules": [
     {
       "id": "rule-task-queue-001",
@@ -35,6 +35,19 @@
     }
   ],
   "entries": [
+    {
+      "id": "arch-2026-04-29-0001",
+      "agent": "claude",
+      "timestamp": "2026-04-29T12:51:00+08:00",
+      "content": "【三AI架构更新 - 2026-04-29】\n\n## 当前真实架构\n\n| AI | 位置 | 角色 |\n|----|------|------|\n| Jarvis | 本地 Windows | 飞书/微信接入、消息入口 |\n| Hermes | 云端 Linux（106.53.207.188） | 执行中枢、24/7运行 |\n| Claude | 本地 Claude Code | 协调大脑 |\n\n## Hermes 三路调用入口\n\n1. 飞书 Bot（cli_a95d06761f385bcb）— 24/7在线\n2. V8 悬浮助手 — 设备管理平台 AI 助手\n3. waley-agent-backend AI诊断 — 设备故障在线诊断\n\n## Hermes 云端部署\n\n- 服务器：106.53.207.188（OpenCloudOS Linux）\n- 知识库：/root/waley-vault/\n- 记忆：memtensor（memos-plugin）\n- SOUL.md：/root/.hermes/SOUL.md\n- 进程：hermes-gateway.service（systemd）\n- SSH：root@106.53.207.188 -p 22（密码 Waley2026!）\n\n## 数据流\n\n用户 → 飞书 → Jarvis（本地）→ Hermes（云端）\n                              ↓\n                        memtensor 记忆\n                              ↓\n                        /root/waley-vault/ 知识库\n",
+      "tags": [
+        "architecture",
+        "tri-ai",
+        "hermes-cloud",
+        "2026-04-29"
+      ],
+      "confidence": 1
+    },
     {
       "id": "claude-startup-2026-04-25-0000",
       "agent": "claude",
@@ -1940,6 +1953,68 @@
         "2026-04-29"
       ],
       "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-102714",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T10:27:14+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 10:25】\n\ntask_queue v54，pending=1 ✅（无变化）\n\n**Pending 任务（持续 pending ~17小时，已在 Z_Memory v359-v375 确认25+次无变化）：**\n- id: task-20260428-jarvis-migration\n- title: Jarvis 整体迁移到腾讯云服务器\n- priority: high\n- description: 将 Jarvis（OpenClaw）从本地迁移到 106.53.207.188 服务器，实现三AI全部云端运行\n- 状态：pending（属人工协调事项：Hermes搭建服务器环境 + Claude迁移OpenClaw配置 + 陈总确认执行窗口）\n\n三AI当前状态：\n- Jarvis: ✅ 在线（当前session）\n- Hermes: 上次启动 2026-04-28T17:40\n- Claude: 上次启动 2026-04-28T17:10\n\nZ_Memory 本次不对entries增量（已多次同步，状态无变化，避免重复）。\n\n<!-- JARVIS_CRON: 2026-04-29T10:25:00+08:00, pending=1 (no change, 25+ confirmations) -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29",
+        "pending-task",
+        "jarvis-migration"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "claude-work-2026-04-29-105723",
+      "agent": "claude",
+      "timestamp": "2026-04-29T10:57:23+08:00",
+      "content": "【Claude 三AI任务队列检查 - 2026-04-29 10:55】\n\n## 任务队列检查结果\n- task_queue.json version: v54\n- pending_count: 0 ✅\n- 所有任务均已完成，无 pending 任务\n\n## 已完成的关键任务（最近）\n- **task-20260428-jarvis-migration** ✅ DONE\n  - 实际迁移的是 Hermes Agent v0.11.0 到腾讯云（用户决策）\n  - 关键修复：lark-oapi安装、FEISHU_APP_ID/SECRET环境变量、systemd service安装\n  - 飞书websocket已连接：wss://msg-frontier.feishu.cn\n  - OpenClaw 已卸载（用户决策）\n\n## 三AI当前状态\n- Jarvis: ✅ 在线（当前session）\n- Hermes: ✅ 云端运行（v0.11.0，2026-04-29T10:22启动）\n- Claude: ✅ 在线（当前session）\n\n## 结论\n无 pending 任务，无需同步通知。三AI均正常运行。\n\n<!-- CLAUDE_CRON: 2026-04-29T10:55:00+08:00, pending=0 -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "claude-work-2026-04-29-115706",
+      "agent": "claude",
+      "timestamp": "2026-04-29T11:57:06+08:00",
+      "content": "【Claude 三AI任务队列检查 - 2026-04-29 11:55】\n\ntask_queue v54，pending_count=0 ✅\n\n无 pending 任务。task-20260428-jarvis-migration 已于 10:22 标记为 done（Hermes Agent 云端部署完成，飞书websocket connected）。\n\n三AI当前状态：\n- Jarvis: ✅ 在线\n- Hermes: ✅ 云端运行中（飞书websocket已连接）\n- Claude: ✅ 在线（当前session）\n\n<!-- CLAUDE_CRON: 2026-04-29T11:55:00+08:00, pending=0 -->",
+      "tags": [
+        "claude"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "id": "jarvis-work-2026-04-29-122721",
+      "agent": "jarvis",
+      "timestamp": "2026-04-29T12:27:21+08:00",
+      "content": "【Jarvis 三AI任务队列检查 - 2026-04-29 12:25】\n\n1. 检查 task_queue.json — 完成\n2. pending任务: 0个；所有任务已完成\n3. 无需同步至 Z_Memory（无 pending 任务）\n4. 三AI状态：Jarvis✅ | Hermes✅ | Claude✅\n\n<!-- JARVIS_CRON: 2026-04-29T12:25:00+08:00, pending=0 -->",
+      "tags": [
+        "cron",
+        "task-queue",
+        "check",
+        "2026-04-29"
+      ],
+      "confidence": 1.0
     }
-  ]
+  ],
+  "claude_last_work": {
+    "version": "2026-04-29",
+    "tasks": [
+      "V8 AI Phase 0: Hermes API接入",
+      "V8 AI Phase 1: FAQ优先路由",
+      "V8 AI Phase 2: MySQL+leads+注册验证",
+      "安全漏洞修复",
+      "Bug修复：重复定义导致点击无反应"
+    ],
+    "notes": "V8点击无反应bug已修复，需明天验证"
+  }
 }

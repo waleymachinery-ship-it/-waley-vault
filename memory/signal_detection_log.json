@@ -1,0 +1,25 @@
+{
+  "last_check_time": "1772767752174",
+  "signals": [
+    {
+      "message_id": "om_x100b55ddf0c4f4b8b20cb5dfdcd3756",
+      "create_time": "1773050848789",
+      "sender": {
+        "id": "cli_a923cf36c362dbd7",
+        "id_type": "app_id",
+        "sender_type": "app",
+        "tenant_key": "1a182862708a1c9d"
+      },
+      "text_preview": "我没办法直接拉其他 agent 进群哦～ 飞书群聊添加成员需要群主或管理员手动操作，或者通过群管理功能。 你是指： 1.  另一个飞书机器人 （比如其他 AI 助手）需要我帮你创建？ 2.  子代理会话 （sub-agent）想在这个群里启动？ 告诉我具体需求，我帮你想办法 🦞",
+      "signals": {
+        "products": [],
+        "faults": [],
+        "intents": [
+          "需要",
+          "代理"
+        ],
+        "mentions": []
+      }
+    }
+  ]
+}

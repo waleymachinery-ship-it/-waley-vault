@@ -1,0 +1,1 @@
+Get-ChildItem "D:\桌面文件\伟力机械知识库\2026\图纸" -Recurse -Include *.dwg,*.dxf | Select-Object FullName,Length | Format-Table -AutoSize

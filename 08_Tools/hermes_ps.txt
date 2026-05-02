@@ -1,0 +1,2 @@
+root      290054  0.0  0.0   4148  2728 ?        Ss   10:05   0:00 bash -c ps aux | grep hermes 2>&1
+root      290056  0.0  0.0   3368  1712 ?        S    10:05   0:00 grep hermes

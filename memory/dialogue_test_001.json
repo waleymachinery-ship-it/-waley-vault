@@ -1,0 +1,54 @@
+{
+  "test_id": "dialogue_test_001",
+  "started_at": "2026-04-18T09:00:00+08:00",
+  "scenario": "模拟用户通过微信咨询产品",
+  "messages": [
+    {
+      "id": 1,
+      "from": "user",
+      "channel": "wechat",
+      "content": "你们最大能做多大的桶？",
+      "timestamp": "2026-04-18T09:00:05+08:00"
+    },
+    {
+      "id": 2,
+      "from": "ai",
+      "content": "我们的储料式机型覆盖 30L 到 200L 容量范围。\n\n- 30L以下：需确认具体规格\n- 30L-200L：标准储料式机型\n- 200L以上：请联系销售单独确认\n\n如有选型疑问，欢迎联系销售：138-2968-XXXX",
+      "source": "FAQ/01_产品选型.md",
+      "confidence": 0.95,
+      "timestamp": "2026-04-18T09:00:10+08:00"
+    }
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "action": "用户发消息",
+      "detail": "微信→OpenClaw→Vault",
+      "status": "done",
+      "timestamp": "2026-04-18T09:00:05+08:00"
+    },
+    {
+      "step": 2,
+      "action": "AI检索FAQ知识库",
+      "detail": "匹配到FAQ/01_产品选型.md 容量范围",
+      "status": "done",
+      "timestamp": "2026-04-18T09:00:08+08:00"
+    },
+    {
+      "step": 3,
+      "action": "生成回答并发送",
+      "detail": "通过OpenClaw回传微信",
+      "status": "done",
+      "timestamp": "2026-04-18T09:00:10+08:00"
+    },
+    {
+      "step": 4,
+      "action": "更新对话记录",
+      "detail": "写入memory/dialogue_test_001.json",
+      "status": "done",
+      "timestamp": "2026-04-18T09:00:12+08:00"
+    }
+  ],
+  "status": "completed",
+  "completed_at": "2026-04-18T09:00:12+08:00"
+}

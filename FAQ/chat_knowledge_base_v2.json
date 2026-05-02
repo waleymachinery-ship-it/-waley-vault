@@ -1,0 +1,882 @@
+{
+  "version": "2.0",
+  "created_at": "2026-04-18T22:00:00+08:00",
+  "description": "伟力机械AI聊天知识库 - 专为网页会话界面设计",
+  "faq_data": [
+    {
+      "id": "faq-001",
+      "category": "产品选型",
+      "intent": ["purchase", "选型"],
+      "question_patterns": [
+        "你们最大能做多大的桶？",
+        "最大容量是多少",
+        "能做200升吗",
+        "容量最大多少",
+        "能做多大规格的"
+      ],
+      "keywords": ["容量", "最大", "能做到多大", "200L", "规格"],
+      "answer": "我们的储料式机型覆盖30L到200L容量范围。30L以下需确认具体规格，30L-200L为标准储料式机型，200L以上请联系销售单独确认。",
+      "response_type": "quick_reply",
+      "follow_up": "请问您是需要标准机型还是大型非标机型？我帮您进一步确认。",
+      "leads_trigger": true,
+      "source": "FAQ/01_产品选型.md"
+    },
+    {
+      "id": "faq-002",
+      "category": "产品选型",
+      "intent": ["purchase", "技术咨询"],
+      "question_patterns": [
+        "你们能做几层的？",
+        "双层可以吗",
+        "三层共挤",
+        "多层共挤"
+      ],
+      "keywords": ["层", "双层", "三层", "共挤", "多层"],
+      "answer": "我们支持多层共挤技术，常见的有单层、双层、三层。具体层数根据产品要求和模具决定。",
+      "response_type": "quick_reply",
+      "follow_up": "您的产品需要几层结构？不同层数有不同的应用场景。",
+      "leads_trigger": true,
+      "source": "FAQ/01_产品选型.md"
+    },
+    {
+      "id": "faq-003",
+      "category": "产品选型",
+      "intent": ["purchase", "技术咨询"],
+      "question_patterns": [
+        "你们用什么材料？",
+        "能用PP吗",
+        "能装PVC吗",
+        "支持什么塑料",
+        "材料有哪些"
+      ],
+      "keywords": ["材料", "PE", "PP", "PVC", "塑料"],
+      "answer": "我们支持的材料包括PE（聚乙烯）—最常用、PP（聚丙烯）、PVC（聚氯乙烯）。其他材料请咨询。",
+      "response_type": "quick_reply",
+      "follow_up": "您的产品用的是什么材料？不同材料加工参数有差异。",
+      "leads_trigger": true,
+      "source": "FAQ/01_产品选型.md"
+    },
+    {
+      "id": "faq-004",
+      "category": "产品选型",
+      "intent": ["purchase", "选型"],
+      "question_patterns": [
+        "我想买一台设备，应该怎么选型？",
+        "怎么选机器",
+        "买什么型号",
+        "推荐一下",
+        "不知道选哪个"
+      ],
+      "keywords": ["选型", "推荐", "买", "型号", "建议"],
+      "answer": "选型需要了解以下信息：1.成品容量（需要做多大的？多少升？）2.层数要求（单层、双层还是三层？）3.材料类型（PE、PP还是其他？）4.产量要求（每小时/每天要多少产量？）5.产品类型（桶、罐、箱还是其他？）。请提供以上信息，我们帮您推荐合适的机型。",
+      "response_type": "detailed",
+      "follow_up": "请告诉我您的产品类型和产量要求，我帮您推荐。",
+      "leads_trigger": true,
+      "source": "FAQ/01_产品选型.md"
+    },
+    {
+      "id": "faq-005",
+      "category": "产品选型",
+      "intent": ["purchase", "技术咨询"],
+      "question_patterns": [
+        "30-50升的典型产品是什么？",
+        "30L到50L能做什么",
+        "这个容量范围"
+      ],
+      "keywords": ["30L", "50L", "容量范围", "化工桶"],
+      "answer": "30-50L容量的典型产品包括化工桶、润滑油桶。",
+      "response_type": "quick_reply",
+      "leads_trigger": true,
+      "source": "FAQ/01_产品选型.md"
+    },
+    {
+      "id": "faq-006",
+      "category": "产品选型",
+      "intent": ["purchase", "技术咨询"],
+      "question_patterns": [
+        "50-100升能做什么",
+        "50到100L产品"
+      ],
+      "keywords": ["50L", "100L", "汽车配件", "工业容器"],
+      "answer": "50-100L容量的典型产品包括汽车配件、工业容器。",
+      "response_type": "quick_reply",
+      "leads_trigger": true,
+      "source": "FAQ/01_产品选型.md"
+    },
+    {
+      "id": "faq-007",
+      "category": "产品选型",
+      "intent": ["purchase", "技术咨询"],
+      "question_patterns": [
+        "100-200升能做什么",
+        "大型产品"
+      ],
+      "keywords": ["100L", "200L", "化工桶", "储水桶", "大型"],
+      "answer": "100-200L容量的典型产品包括大型化工桶、储水桶。",
+      "response_type": "quick_reply",
+      "leads_trigger": true,
+      "source": "FAQ/01_产品选型.md"
+    },
+    {
+      "id": "faq-008",
+      "category": "价格咨询",
+      "intent": ["purchase", "price"],
+      "question_patterns": [
+        "设备多少钱？",
+        "价格多少",
+        "一台多少钱",
+        "报价",
+        "售价"
+      ],
+      "keywords": ["价格", "多少钱", "报价", "售价", "造价"],
+      "answer": "设备价格根据机型、配置、产量要求等因素不同。标准储料式机型（30-200L）价格区间较大，具体报价请联系销售提供。",
+      "response_type": "quick_reply",
+      "follow_up": "请问您有具体机型需求吗？我们可以安排销售给您正式报价。",
+      "leads_trigger": true,
+      "source": "FAQ/02_价格咨询.md"
+    },
+    {
+      "id": "faq-009",
+      "category": "价格咨询",
+      "intent": ["purchase", "logistics"],
+      "question_patterns": [
+        "交货期要多久？",
+        "多久能交货",
+        "生产周期",
+        "什么时候能到"
+      ],
+      "keywords": ["交货期", "交期", "周期", "多久"],
+      "answer": "标准机型交货期4-8周，非标配置单独确认，大型设备8-12周。具体交货期根据订单确认后的生产安排。",
+      "response_type": "quick_reply",
+      "leads_trigger": true,
+      "source": "FAQ/02_价格咨询.md"
+    },
+    {
+      "id": "faq-010",
+      "category": "价格咨询",
+      "intent": ["purchase", "price"],
+      "question_patterns": [
+        "付款方式是怎样的？",
+        "怎么付款",
+        "定金多少",
+        "首付"
+      ],
+      "keywords": ["付款", "定金", "首付", "尾款"],
+      "answer": "常见付款方式：定金：合同签订后支付30%；发货前：支付60%；验收后：支付10%。具体付款方式可与销售协商。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "FAQ/02_价格咨询.md"
+    },
+    {
+      "id": "faq-011",
+      "category": "价格咨询",
+      "intent": ["purchase", "price"],
+      "question_patterns": [
+        "怎么拿到正式报价？",
+        "想拿报价",
+        "要报价单"
+      ],
+      "keywords": ["报价", "报价单", "正式"],
+      "answer": "报价流程：1.联系我们，说明需求（机型、配置、产量要求）2.销售团队提供技术方案 3.确认方案后提供正式报价单 4.双方确认后签订合同。",
+      "response_type": "detailed",
+      "follow_up": "请告诉我您的机型需求，我们安排销售给您报价。",
+      "leads_trigger": true,
+      "source": "FAQ/02_价格咨询.md"
+    },
+    {
+      "id": "faq-012",
+      "category": "价格咨询",
+      "intent": ["purchase", "service"],
+      "question_patterns": [
+        "设备有保修吗？",
+        "质保多久",
+        "保修期"
+      ],
+      "keywords": ["保修", "质保", " warranty"],
+      "answer": "整机保修1年，主要部件（螺杆、模头）质保，提供终身技术支持。详细保修条款见合同。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "FAQ/02_价格咨询.md"
+    },
+    {
+      "id": "faq-013",
+      "category": "工艺参数",
+      "intent": ["technical", "工艺"],
+      "question_patterns": [
+        "PE材料用多少温度？",
+        "PE温度参数",
+        "聚乙烯加工温度"
+      ],
+      "keywords": ["PE", "温度", "料筒", "加工"],
+      "answer": "PE（聚乙烯）典型加工温度：料筒区180-220°C，熔体区200-260°C，模头200-280°C。具体温度根据材料型号和制品要求调整，新机型调试时建议从偏低温度开始逐步升高。",
+      "response_type": "detailed",
+      "leads_trigger": false,
+      "source": "FAQ/03_工艺参数.md"
+    },
+    {
+      "id": "faq-014",
+      "category": "工艺参数",
+      "intent": ["technical", "工艺"],
+      "question_patterns": [
+        "PP材料和PE有什么区别？",
+        "PP温度",
+        "聚丙烯加工温度"
+      ],
+      "keywords": ["PP", "PE", "温度", "加工"],
+      "answer": "PP（聚丙烯）加工温度略高于PE：料筒区200-250°C，熔体区220-280°C，模头220-300°C。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "FAQ/03_工艺参数.md"
+    },
+    {
+      "id": "faq-015",
+      "category": "工艺参数",
+      "intent": ["technical", "工艺"],
+      "question_patterns": [
+        "加工时压力多大？",
+        "熔体压力",
+        "压力参数"
+      ],
+      "keywords": ["压力", "加工", "参数"],
+      "answer": "熔体压力与材料、机型、模头设计相关。注意：高压下粘度会增加，需要根据实际情况调整。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "FAQ/03_工艺参数.md"
+    },
+    {
+      "id": "faq-016",
+      "category": "工艺参数",
+      "intent": ["technical", "工艺"],
+      "question_patterns": [
+        "壁厚怎么控制？",
+        "壁厚不均怎么办",
+        "壁厚参数"
+      ],
+      "keywords": ["壁厚", "控制", "参数", "调节"],
+      "answer": "壁厚控制要点：1.程序控制：壁厚程序分段设置 2.模头调节：口模间隙微调 3.气压调节：吹胀比影响壁厚分布",
+      "response_type": "detailed",
+      "leads_trigger": false,
+      "source": "FAQ/03_工艺参数.md"
+    },
+    {
+      "id": "faq-017",
+      "category": "工艺参数",
+      "intent": ["technical", "工艺"],
+      "question_patterns": [
+        "换色需要多久？",
+        "换色时间",
+        "清洗要多久"
+      ],
+      "keywords": ["换色", "时间", "清洗", "颜色"],
+      "answer": "快速换色是我们的优势：常规换色30-60分钟，彻底清洗2-4小时。取决于颜色差异和材料残留。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "FAQ/03_工艺参数.md"
+    },
+    {
+      "id": "faq-018",
+      "category": "工艺参数",
+      "intent": ["technical", "工艺"],
+      "question_patterns": [
+        "材料需要干燥吗？",
+        "干燥温度",
+        "PP干燥"
+      ],
+      "keywords": ["干燥", "预处理", "烘料", "PE", "PP"],
+      "answer": "材料预处理：PE一般不需要干燥（吸湿性低）；PP建议干燥2-4小时（80-100°C）；PVC需要特别注意，根据配方定。",
+      "response_type": "detailed",
+      "leads_trigger": false,
+      "source": "FAQ/03_工艺参数.md"
+    },
+    {
+      "id": "faq-019",
+      "category": "设备操作",
+      "intent": ["operation", "操作"],
+      "question_patterns": [
+        "开机步骤是什么？",
+        "怎么开机",
+        "启动流程"
+      ],
+      "keywords": ["开机", "启动", "流程", "步骤"],
+      "answer": "标准开机流程：1.检查准备：确认模具安装正确、检查原料是否充足、确认急停按钮复位 2.加热升温：开启加热系统、等待温度达到设定值（一般需30-60分钟）、检查热电偶是否正常 3.启动塑化：低速启动螺杆、观察熔体状态、逐步提高转速 4.充模吹胀：调整壁厚程序、设置吹胀比、开始生产",
+      "response_type": "detailed",
+      "leads_trigger": false,
+      "source": "FAQ/04_设备操作.md"
+    },
+    {
+      "id": "faq-020",
+      "category": "设备操作",
+      "intent": ["operation", "操作"],
+      "question_patterns": [
+        "关机步骤是什么？",
+        "怎么关机",
+        "停机流程"
+      ],
+      "keywords": ["关机", "停机", "流程", "步骤"],
+      "answer": "关机流程：1.停止加料：停止供料系统、等待料筒内材料排空 2.降温清理：关闭加热、用新料冲洗螺杆和模头、清理模具表面 3.停机维护：关闭电源、清洁设备、做好记录",
+      "response_type": "detailed",
+      "leads_trigger": false,
+      "source": "FAQ/04_设备操作.md"
+    },
+    {
+      "id": "faq-021",
+      "category": "设备操作",
+      "intent": ["operation", "工艺"],
+      "question_patterns": [
+        "怎么设置工艺参数？",
+        "参数设置",
+        "工艺参数怎么调"
+      ],
+      "keywords": ["参数", "设置", "工艺", "调节"],
+      "answer": "主要参数设置：螺杆转速（影响产量和塑化质量，从低速开始逐步增加）、温度设定（影响熔体流动性，参考材料参数范围）、壁厚程序（分段控制壁厚，根据产品要求调整）、吹胀比（影响壁厚分布，1.5-3.0倍）。",
+      "response_type": "detailed",
+      "leads_trigger": false,
+      "source": "FAQ/04_设备操作.md"
+    },
+    {
+      "id": "faq-022",
+      "category": "设备操作",
+      "intent": ["operation", "保养"],
+      "question_patterns": [
+        "每天开机前要检查什么？",
+        "开机前检查",
+        "日常检查"
+      ],
+      "keywords": ["检查", "开机前", "日常", "每天"],
+      "answer": "每天开机前检查：润滑油液位、冷却水循环、加热圈是否完好、热电偶读数是否正常、模具安装是否牢固。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "FAQ/04_设备操作.md"
+    },
+    {
+      "id": "faq-023",
+      "category": "故障处理",
+      "intent": ["fault", "故障"],
+      "question_patterns": [
+        "设备不出料或出料慢怎么办？",
+        "不出料",
+        "出料慢",
+        "堵料"
+      ],
+      "keywords": ["不出料", "出料慢", "堵料", "螺杆", "堵塞"],
+      "answer": "可能原因：1.螺杆磨损或损坏 2.温度设定过低 3.原料里有杂质堵塞 4.换网器堵塞。排查步骤：1.检查温度是否达到设定值 2.清理换网器和口模 3.如仍不出料，联系维修。",
+      "response_type": "detailed",
+      "leads_trigger": false,
+      "fault_related": true,
+      "source": "FAQ/05_故障处理.md"
+    },
+    {
+      "id": "faq-024",
+      "category": "故障处理",
+      "intent": ["fault", "故障"],
+      "question_patterns": [
+        "产品壁厚不均怎么办？",
+        "壁厚不均",
+        "壁厚问题"
+      ],
+      "keywords": ["壁厚", "不均", "均匀性", "壁厚问题"],
+      "answer": "可能原因：1.壁厚程序设置不当 2.模头间隙不均匀 3.吹胀比不稳定 4.材料流动性变化。排查步骤：1.检查壁厚程序参数 2.检测模头口模间隙 3.检查气压是否稳定。",
+      "response_type": "detailed",
+      "leads_trigger": false,
+      "fault_related": true,
+      "source": "FAQ/05_故障处理.md"
+    },
+    {
+      "id": "faq-025",
+      "category": "故障处理",
+      "intent": ["fault", "故障"],
+      "question_patterns": [
+        "产品表面有黑点或黄线怎么办？",
+        "黑点",
+        "黄线",
+        "表面缺陷"
+      ],
+      "keywords": ["黑点", "黄线", "表面", "降解", "污染"],
+      "answer": "可能原因：1.材料过热降解 2.螺杆或料筒磨损 3.换色不彻底 4.原料受污染。排查步骤：1.降低加工温度 2.进行彻底洗料/换色 3.检查螺杆和料筒磨损情况 4.更换原料。",
+      "response_type": "detailed",
+      "leads_trigger": false,
+      "fault_related": true,
+      "source": "FAQ/05_故障处理.md"
+    },
+    {
+      "id": "faq-026",
+      "category": "故障处理",
+      "intent": ["fault", "故障"],
+      "question_patterns": [
+        "设备声音异常或振动大怎么办？",
+        "声音异常",
+        "振动",
+        "异响"
+      ],
+      "keywords": ["声音", "振动", "异响", "异常", "噪音"],
+      "answer": "可能原因：1.轴承磨损 2.润滑不足 3.螺杆弯曲 4.地脚螺栓松动。处理：立即停机检查，联系维修。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "fault_related": true,
+      "source": "FAQ/05_故障处理.md"
+    },
+    {
+      "id": "faq-027",
+      "category": "故障处理",
+      "intent": ["fault", "service"],
+      "question_patterns": [
+        "设备坏了找谁维修？",
+        "维修",
+        "坏了怎么办"
+      ],
+      "keywords": ["维修", "坏了", "售后", "联系"],
+      "answer": "质保期内：联系销售，提供设备编号，厂家负责。质保期外：联系售后服务。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "fault_related": true,
+      "source": "FAQ/05_故障处理.md"
+    },
+    {
+      "id": "faq-028",
+      "category": "故障处理",
+      "intent": ["fault", "紧急"],
+      "question_patterns": [
+        "遇到紧急情况怎么办？",
+        "紧急情况",
+        "急停"
+      ],
+      "keywords": ["紧急", "急停", "事故", "危险"],
+      "answer": "紧急情况处理：1.立即按下急停按钮 2.切断电源 3.记录故障现象 4.联系维修人员。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "fault_related": true,
+      "source": "FAQ/05_故障处理.md"
+    },
+    {
+      "id": "faq-029",
+      "category": "故障处理",
+      "intent": ["fault", "服务"],
+      "question_patterns": [
+        "维修时需要提供什么信息？",
+        "报修",
+        "维修信息"
+      ],
+      "keywords": ["维修", "报修", "信息", "编号"],
+      "answer": "维修时请提供：1.设备型号和编号 2.故障现象描述 3.发现时间 4.已做过的处理。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "fault_related": true,
+      "source": "FAQ/05_故障处理.md"
+    },
+    {
+      "id": "faq-030",
+      "category": "维护保养",
+      "intent": ["maintenance", "保养"],
+      "question_patterns": [
+        "每班每日需要做什么保养？",
+        "每日保养",
+        "日常保养"
+      ],
+      "keywords": ["保养", "每日", "日常", "润滑", "清洁"],
+      "answer": "每班/每日保养项目：润滑检查（检查各润滑点油量）、清洁（清理设备表面灰尘杂物）、紧固（检查螺栓是否松动）、记录（记录设备运行参数）。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "FAQ/06_维护保养.md"
+    },
+    {
+      "id": "faq-031",
+      "category": "维护保养",
+      "intent": ["maintenance", "保养"],
+      "question_patterns": [
+        "每周需要做什么保养？",
+        "每周保养"
+      ],
+      "keywords": ["每周", "保养", "润滑", "冷却"],
+      "answer": "每周保养项目：润滑系统（补充润滑油）、冷却系统（检查冷却水水质）、加热系统（检查加热圈接线）、安全装置（测试急停、门限位）。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "FAQ/06_维护保养.md"
+    },
+    {
+      "id": "faq-032",
+      "category": "维护保养",
+      "intent": ["maintenance", "保养"],
+      "question_patterns": [
+        "每季度需要做什么保养？",
+        "季度保养"
+      ],
+      "keywords": ["季度", "保养", "润滑", "传动"],
+      "answer": "每季度保养项目：润滑系统（更换润滑油）、传动系统（检查皮带张力）、电气系统（检查接线端子）、模头（清理检查）。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "FAQ/06_维护保养.md"
+    },
+    {
+      "id": "faq-033",
+      "category": "维护保养",
+      "intent": ["maintenance", "保养"],
+      "question_patterns": [
+        "每半年年度需要做什么保养？",
+        "年度保养",
+        "大修"
+      ],
+      "keywords": ["年度", "半年", "大修", "全面检修"],
+      "answer": "每半年/年度保养项目：大修（全面检修）、螺杆检查（检测磨损情况）、料筒检查（检测磨损/腐蚀）、控制系统（检测仪表精度）。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "FAQ/06_维护保养.md"
+    },
+    {
+      "id": "faq-034",
+      "category": "维护保养",
+      "intent": ["maintenance", "配件"],
+      "question_patterns": [
+        "配件在哪里买？",
+        "买配件",
+        "螺杆哪里买"
+      ],
+      "keywords": ["配件", "购买", "螺杆", "加热圈"],
+      "answer": "原厂配件联系销售。常用配件包括螺杆、加热圈、热电偶等。订购周期3-7个工作日。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "FAQ/06_维护保养.md"
+    },
+    {
+      "id": "faq-035",
+      "category": "维护保养",
+      "intent": ["maintenance", "润滑"],
+      "question_patterns": [
+        "润滑点有哪些？用什么润滑油？",
+        "润滑",
+        "润滑油",
+        "润滑脂"
+      ],
+      "keywords": ["润滑", "润滑油", "润滑脂", "轴承"],
+      "answer": "润滑指南：轴承箱用46#液压油每季更换；齿轮箱用齿轮油每半年更换；滑动导轨用润滑脂每周；丝杠用润滑脂每月。",
+      "response_type": "detailed",
+      "leads_trigger": false,
+      "source": "FAQ/06_维护保养.md"
+    },
+    {
+      "id": "faq-036",
+      "category": "维护保养",
+      "intent": ["maintenance", "存放"],
+      "question_patterns": [
+        "设备长时间不用怎么保养？",
+        "长期存放",
+        "停机保养",
+        "防锈"
+      ],
+      "keywords": ["存放", "停机", "防锈", "长期"],
+      "answer": "长期存放保养：1.全面清洁设备 2.对金属表面涂防锈油 3.模头拆下保养存放 4.定期通电运行（每月一次） 5.保持存放环境干燥。",
+      "response_type": "detailed",
+      "leads_trigger": false,
+      "source": "FAQ/06_维护保养.md"
+    },
+    {
+      "id": "faq-037",
+      "category": "联系方式",
+      "intent": ["contact", "联系"],
+      "question_patterns": [
+        "联系方式是什么？",
+        "怎么联系你们",
+        "电话多少",
+        "地址",
+        "在哪里"
+      ],
+      "keywords": ["联系", "电话", "地址", "销售"],
+      "answer": "电话：138-2968-XXXX。地址：广东省汕头市金平区大学路290号。公司：汕头市伟力塑料机械厂有限公司。",
+      "response_type": "quick_reply",
+      "leads_trigger": true,
+      "source": "FAQ/00_FAQ主页.md"
+    },
+    {
+      "id": "faq-038",
+      "category": "工厂参观",
+      "intent": ["purchase", "contact"],
+      "question_patterns": [
+        "工厂在哪？",
+        "可以参观吗？",
+        "能去看厂吗？",
+        "能实地考察吗？",
+        "怎么去你们厂里？",
+        "可以看厂吗",
+        "工厂参观"
+      ],
+      "keywords": ["工厂", "参观", "看厂", "考察", "实地", "厂里", "来厂"],
+      "answer": "我们位于广东省汕头市金平区大学路290号。热烈欢迎国内外客户来厂参观考察！参观需提前预约，请联系我们的销售团队安排。",
+      "response_type": "quick_reply",
+      "follow_up": "请问您计划什么时候方便来厂参观？我帮您联系销售安排接待。",
+      "leads_trigger": true,
+      "source": "补充"
+    },
+    {
+      "id": "faq-039",
+      "category": "售后服务",
+      "intent": ["service", "售后"],
+      "question_patterns": [
+        "售后服务包括哪些？",
+        "售后怎么样",
+        "买了之后有服务吗",
+        "售后服务",
+        "技术支持"
+      ],
+      "keywords": ["售后", "服务", "支持", "保障"],
+      "answer": "我们的售后服务包括：1.安装调试：工程师上门安装调试，培训操作人员 2.质保服务：整机质保1年，主要部件（螺杆、模头）质保 3.技术支持：提供终身技术支持，工艺问题随时咨询 4.维修服务：质保期内免费维修，质保期外有偿服务 5.配件供应：原厂配件，3-7个工作日发货。",
+      "response_type": "detailed",
+      "follow_up": "请问您对哪方面的售后服务最关心？我可以给您详细介绍。",
+      "leads_trigger": false,
+      "source": "补充"
+    },
+    {
+      "id": "faq-040",
+      "category": "售后服务",
+      "intent": ["service", "培训"],
+      "question_patterns": [
+        "有培训吗？",
+        "操作培训",
+        "工程师培训",
+        "学会为止吗",
+        "包教包会"
+      ],
+      "keywords": ["培训", "教学", "学会", "操作员"],
+      "answer": "我们提供现场培训服务：设备安装调试期间，工程师会对您的操作人员进行面对面培训，内容包括：设备操作、参数调整、日常保养、故障排查。培训直到您的操作人员完全掌握为止，不额外收费。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "补充"
+    },
+    {
+      "id": "faq-041",
+      "category": "售后服务",
+      "intent": ["service", "安装"],
+      "question_patterns": [
+        "安装调试要多久？",
+        "工程师上门吗",
+        "安装调试服务",
+        "怎么安装"
+      ],
+      "keywords": ["安装", "调试", "上门", "工程师"],
+      "answer": "标准机型安装调试周期约3-5个工作日（包括设备就位、管道连接、电气接线和工艺调试）。我们的工程师会全程现场服务，确保设备正常运行并完成操作培训。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "补充"
+    },
+    {
+      "id": "faq-042",
+      "category": "产品选型",
+      "intent": ["purchase", "技术咨询"],
+      "question_patterns": [
+        "设备产能多大？",
+        "一小时能产多少",
+        "产量多少",
+        "速度多快",
+        "每分钟几个"
+      ],
+      "keywords": ["产能", "产量", "速度", "效率", "每分钟", "每小时"],
+      "answer": "设备产能取决于机型、制品规格和材料：标准30-50L机型约50-120个/小时；100L以上大型机型约20-50个/小时。具体产量根据您的产品要求定制。",
+      "response_type": "quick_reply",
+      "leads_trigger": true,
+      "source": "补充"
+    },
+    {
+      "id": "faq-043",
+      "category": "产品选型",
+      "intent": ["purchase", "技术咨询"],
+      "question_patterns": [
+        "你们出口吗？",
+        "有出口经验吗",
+        "国外客户多吗",
+        "海外市场",
+        "出口到哪些国家"
+      ],
+      "keywords": ["出口", "国外", "海外", "外贸", "international", "export"],
+      "answer": "我们是38年专业塑料机械制造商，产品出口全球40+国家和地区，包括东南亚、中东、非洲、南美、东欧等市场。有丰富的出口经验，可协助办理出口相关手续。",
+      "response_type": "quick_reply",
+      "follow_up": "请问您是哪个国家/地区的？我可以介绍我们在当地的案例。",
+      "leads_trigger": true,
+      "source": "补充"
+    },
+    {
+      "id": "faq-044",
+      "category": "产品选型",
+      "intent": ["purchase", "技术咨询"],
+      "question_patterns": [
+        "能定制吗？",
+        "非标机型",
+        "特殊规格",
+        "可以改吗",
+        "定制化"
+      ],
+      "keywords": ["定制", "非标", "特殊", "改", "custom"],
+      "answer": "我们支持非标定制！根据您的产品要求，可以定制特殊容量、特殊层数、特殊材料、特殊产量要求的机型。非标机型需要详细沟通技术方案，交货期和价格单独确认。",
+      "response_type": "quick_reply",
+      "follow_up": "请描述您的特殊需求（容量、层数、材料、产量等），我们评估可行性。",
+      "leads_trigger": true,
+      "source": "补充"
+    },
+    {
+      "id": "faq-045",
+      "category": "产品选型",
+      "intent": ["purchase", "技术咨询"],
+      "question_patterns": [
+        "有什么认证？",
+        "CE认证吗",
+        "ISO认证",
+        "质量认证",
+        "证书"
+      ],
+      "keywords": ["认证", "CE", "ISO", "证书", "质量标准"],
+      "answer": "我们已通过ISO9001质量管理体系认证。产品可根据目标市场要求办理CE、UL、CSA等认证。具体认证要求请与销售确认。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "补充"
+    },
+    {
+      "id": "faq-046",
+      "category": "产品选型",
+      "intent": ["purchase", "技术咨询"],
+      "question_patterns": [
+        "和其他品牌比有什么优势？",
+        "为什么要买你们的？",
+        "你们和某某比较",
+        "优势在哪",
+        "核心竞争力"
+      ],
+      "keywords": ["优势", "比较", "为什么", "区别", "不同"],
+      "answer": "我们的核心优势：1.38年专业积累，深耕中空吹塑成型领域 2.出口全球40+国家，了解各国市场需求 3.非标定制能力强，可根据产品定制机型 4.售后服务完善，工程师可上门安装调试 5.配件供应及时，终身技术支持。",
+      "response_type": "detailed",
+      "leads_trigger": true,
+      "source": "补充"
+    },
+    {
+      "id": "faq-047",
+      "category": "价格咨询",
+      "intent": ["purchase", "logistics"],
+      "question_patterns": [
+        "可以货到付款吗？",
+        "月结可以吗",
+        "信用证可以吗",
+        "payment term",
+        "结算方式"
+      ],
+      "keywords": ["付款方式", "月结", "信用证", "LC", "T/T", "结算"],
+      "answer": "国内客户：常见T/T结算，定金30%+发货前60%+验收10%。出口客户：支持T/T、L/C at sight等。特殊付款方式请与销售协商。",
+      "response_type": "quick_reply",
+      "leads_trigger": true,
+      "source": "补充"
+    },
+    {
+      "id": "faq-048",
+      "category": "价格咨询",
+      "intent": ["purchase", "logistics"],
+      "question_patterns": [
+        "运费谁承担？",
+        "送货上门吗",
+        "怎么运输",
+        "木箱包装"
+      ],
+      "keywords": ["运费", "运输", "送货", "包装", "物流"],
+      "answer": "设备采用防潮木箱包装，适合海运和陆运。运输方式：国内客户可代为联系物流，运费客户承担；出口FOB汕头港或客户指定交货方式。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "补充"
+    },
+    {
+      "id": "faq-049",
+      "category": "产品选型",
+      "intent": ["purchase", "技术咨询"],
+      "question_patterns": [
+        "设备尺寸多大？",
+        "占地面积",
+        "机器尺寸",
+        "多大地方能放"
+      ],
+      "keywords": ["尺寸", "占地", "面积", "大小", "长宽高"],
+      "answer": "设备尺寸因机型而异：小型机型约3x2x3米（长x宽x高）；大型机型约6x4x4米。具体尺寸根据机型和配置不同，请与销售确认。场地要求需考虑模具存放和操作空间。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "补充"
+    },
+    {
+      "id": "faq-050",
+      "category": "工艺参数",
+      "intent": ["technical", "工艺"],
+      "question_patterns": [
+        "吹胀比是什么？",
+        "吹胀比怎么调",
+        "气压多大"
+      ],
+      "keywords": ["吹胀比", "气压", "吹气"],
+      "answer": "吹胀比是制品直径与模口直径的比值，一般控制在1.5-3.0倍。吹胀比越大，壁厚分布越不均匀；吹胀比越小，制品冷却越好。需根据产品要求调整。",
+      "response_type": "quick_reply",
+      "leads_trigger": false,
+      "source": "补充"
+    }
+  ],
+  "intent_detection_rules": {
+    "purchase_signals": {
+      "keywords": [
+        "价格", "多少钱", "报价", "售价", "买", "订购",
+        "交货期", "交期", "什么时候能到",
+        "付款", "定金", "首付",
+        "规格", "参数", "能发资料吗", "样本", "样品",
+        "最小起订量", "MOQ",
+        "保修", "质保", " warranty"
+      ],
+      "threshold": 1,
+      "action": "collect_leads"
+    },
+    "fault_signals": {
+      "keywords": [
+        "报警", "不工作", "故障", "坏了", "出问题",
+        "漏气", "壁厚不均", "黑点", "黄线", "表面缺陷",
+        "声音异常", "振动", "异响",
+        "不出料", "出料慢", "堵料",
+        "紧急", "急停"
+      ],
+      "threshold": 1,
+      "action": "route_to_fault_report"
+    },
+    "technical_consultation": {
+      "keywords": [
+        "温度", "压力", "参数", "怎么调", "设置",
+        "材料", "PE", "PP", "PVC", "干燥",
+        "壁厚", "吹胀比", "换色",
+        "开机", "关机", "操作", "流程"
+      ],
+      "threshold": 1,
+      "action": "route_to_knowledge_base"
+    },
+    "maintenance_signals": {
+      "keywords": [
+        "保养", "润滑", "维护", "清洁", "检查",
+        "配件", "轴承", "皮带", "密封"
+      ],
+      "threshold": 1,
+      "action": "route_to_knowledge_base"
+    }
+  },
+  "quick_reply_templates": {
+    "greeting": "您好！我是伟力机械智能助手，请问有什么可以帮您？\n\n您可以问我：\n• 产品选型（容量、层数、材料、产能）\n• 工艺参数（温度、压力、壁厚、吹胀比）\n• 故障处理（报警、不出料、壁厚不均等）\n• 维护保养（润滑、清洁、配件）\n• 价格咨询（报价、交货期、付款方式）\n• 售后服务（安装、培训、质保）\n\n请选择或描述您的问题 😊",
+    "unknown": "抱歉，我没能完全理解您的问题 😅\n\n您可以尝试这样问我：\n🔧 \"你们能做多大的桶？\"\n💰 \"设备多少钱？\"\n📋 \"交货期要多久？\"\n🔍 \"壁厚不均怎么办？\"\n🏭 \"工厂在哪？\"\n\n或者直接选择您关心的类别，告诉我：\n• 选型 / 产品\n• 工艺 / 参数\n• 故障 / 售后\n• 价格 / 交货",
+    "transfer_to_agent": "您的问题比较复杂，我帮您转接人工客服。请稍等 👨‍💻",
+    "fault_report_prompt": "您描述的情况听起来像是设备故障 🔧\n\n您可以：\n1. 描述具体故障现象（报警代码、不正常的声音或动作等），我来帮您初步判断\n2. 或者直接提交故障报告，我们的技术人员会尽快联系您\n\n点击下方按钮开始提交故障报告 →",
+    "leads_prompt": "为了更好地为您服务，请告诉我：\n\n📝 您的姓名\n🏢 公司名称\n📞 联系电话\n🛠 感兴趣的产品（如：100L储料式机型）\n\n我们会在24小时内安排销售联系您！"
+  },
+  "statistics": {
+    "total_faqs": 50,
+    "categories": {
+      "产品选型": 13,
+      "价格咨询": 7,
+      "工艺参数": 7,
+      "设备操作": 4,
+      "故障处理": 7,
+      "维护保养": 7,
+      "联系方式": 1,
+      "工厂参观": 1,
+      "售后服务": 3
+    },
+    "intent_types": {
+      "purchase": 22,
+      "fault": 7,
+      "technical": 14,
+      "maintenance": 7,
+      "contact": 3
+    }
+  }
+}
